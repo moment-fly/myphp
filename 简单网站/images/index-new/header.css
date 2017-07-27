@@ -1,0 +1,98 @@
+ @charset "utf-8";
+@font-face {
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans Narrow'), local('PTSans-Narrow'), url(../fonts/UyYrYy3ltEffJV9QueSi4RdbPw3QSf9R-kE0EsQUn2A.woff) format('woff');
+}
+@font-face {
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Narrow Bold'), local('PTSans-NarrowBold'), url(../fonts/Q_pTky3Sc3ubRibGToTAYiylde52zikAzebNtJS89aM.woff) format('woff');
+}
+
+body{min-width:1200px;}
+.index{margin:0; padding:0; margin:0 auto; color:#393939; background:#f6f6f6;}
+img,ul,li,dd,dt,dl,div,p,input{margin:0px;border:none;padding:0px;margin:0 auto;  list-style:none;outline:none;}
+li{margin:0px;border:none;padding:0px;margin:0 auto;  list-style:none;}
+a {text-decoration:none; color:#393939; outline:none;}
+a:hover {}
+a img{border:none;outline:none;}
+.clear {clear:both}
+ul, li {list-style:none;}
+*{ margin:0; padding:0; font-size:16px;font-family:"微软雅黑", Tahoma, Arial;}
+h1, h2, h3, h4, h5, h6 {font-size: 16px;font-weight: bold;line-height: 24px;text-align: left;}
+p, li {color: #393939;line-height: 24px;font-family:"微软雅黑", Tahoma, Arial;}
+input{vertical-align:middle;}
+select{vertical-align:middle;}
+.light il{overflow:visible;}
+a:link, a:visited {
+	text-decoration: none;outline:none;font-family:"微软雅黑", Tahoma, Arial;
+}
+
+a:hover {
+	text-decoration: none;
+	cursor: pointer;
+}
+.header{min-width:1100px;
+  _width:expression(this.width < 1100 ? "1100px" : "auto");}
+.header_top{width:1100px;}
+.header_top a{color:#393939; font-size:14px;}
+.sfc_header{position:fixed; top:0; z-index:99999; width:100%;}
+.header_bj{background:#fff;-webkit-box-shadow:0 4px 0 rgba(0, 0, 0, 0.04);  -moz-box-shadow:0 4px 0 rgba(0, 0, 0, 0.04);  box-shadow:0 4px 0 rgba(0, 0, 0, 0.04); border-bottom:2px solid #eee;}
+.sfc_header_bj{background:#fff; filter:alpha(opacity=50);  -moz-opacity:0.5;  -khtml-opacity: 0.5;  opacity: 0.4; width:100%; height:70px; }
+.sfc_logo2{}
+.sfc_headerm{ width:100%; position:absolute; top:0}
+.sfc_header .top{width:1200px; height:80px; margin:0 auto;}
+.language a{ color:#ff8100; font-size:14px; }
+.language span{padding:0 2px;}
+.sfc_logo, .sfc_logo2{float:left; padding:5px 5px 0 0;}
+.language{float:right; padding-left:15px;}
+.nav{float:right; padding-top:25px;}
+.nav em{ text-align:right; color:#ff6600; font-size:24px; font-family:"时尚中黑简体";}
+.Navigation{background:#ff6600; height:42px;}
+.Navigation2{background:#ff6600; height:42px;}
+.Navigation_m a, .Navigation_m2 a{padding:0 40px 10px 0px; line-height:42px; font-weight:bold; font-size:16px; float:left; color:#ff6600}
+.Navigation_m2 a:hover{color:#333;}
+.footer{background:#5b5b5b; border-bottom:10px solid #000; padding-bottom:30px;}
+.footer_conter{ width:1200px; margin:0 auto;}
+.footer_bottom{padding:30px 0;}
+.footer_bottom li{float:left; padding-right:15px;}
+.footer_conter p{color:#fff;}
+.footer_logo{float:left; width:230px; padding-top:40px;}
+.footer_list{float:left;}
+.footer_list h3{color:#fff;}
+.footer_list li a{float:left; display:block; color:#fff;}
+.footer_list li{width:200px; float:left; color:#fff;}
+.footer_list li img{padding-top:30px;width:100px;}
+.footer_top{padding-top:40px; border-bottom:1px solid #ccc; padding-bottom:30px;}
+.footer_bottom li a{color:#fff;}
+.area-right-l input{border:1px solid #fff; background:#fff; margin-bottom:10px; font-size:13px; width:220px; height:25px;}
+.area-right-l{width:230px; float:left;}
+.area-right-r{width:60px; float:left;}
+.area-right-r input{background:#ff6600;width:50px; height:64px; color:#fff;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

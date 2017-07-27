@@ -1,0 +1,616 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<link href="css/index-new/header.css" rel="stylesheet" type="text/css" />
+ 
+<link href="js/ui/jquery-ui.css" rel="stylesheet" type="text/css">
+
+<meta name="keywords" content="联系我们" >
+<meta name="description" content="联系我们" ><title>快邮小包-荆棘鸟速递</title>  
+
+<!--   <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ac5f16bb457aa406a62fb468846227cc";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script> -->
+</head>
+<body>
+<div class="index">
+    <div class="header">
+        
+<!--header start-->
+<style>
+    .mysfctc{width:160px; border:1px solid #ccc; background:#fff; position:absolute;overflow:hidden; z-index:999999999;right:0px;display:none;right:40px;}
+    .mysfctct{margin:10px 10px 0 10px; padding:0px 10px 10px 10px; border-bottom:1px solid #ccc;}
+    .mysfctct span a:hover{color:#ff6602;}
+    .mysfctcm{margin:10px 10px 0 10px; border-bottom:1px solid #ccc; padding-bottom:10px;}
+    .mysfctcm ul li{height:30px; line-height:30px; padding-left:20px;}
+    .mysfctcm ul li:hover{background:#f5f5f5;}
+    .mysfctcf{margin:10px 10px 0 10px; padding-left:15px; padding-bottom:15px;}
+    .mysfctcf input{width:80px; height:25px; background:#f5f5f5; cursor:pointer; color:#393939;}
+    .nav_slide ul li a{color: #393939;font-size: 14px;padding: 6px;line-height: 15px;background: #FFFFFF; font-weight:normal;}
+    .nav_slide ul li a:hover{color: #ff6600;font-size: 14px;padding: 6px;line-height: 15px;background: #f2f2f2;}
+    .nav_slide{
+        position: absolute;top:50px;overflow: hidden; padding-bottom:10px;
+        background: #fff;
+        display: none;
+    }
+        }
+</style>
+<!-- <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-83593823-1', 'auto');
+  ga('send', 'pageview');
+
+</script> -->
+<script type="text/javascript">
+    $(function(){
+        $('.mySFC').click(function(){
+            $('.mysfctc').slideToggle();
+        })
+        $('.mySFC').mouseleave(function(){
+            $('.mysfctc').slideUp();
+        })
+        $('#nav').find('li').hover(function(){
+            $(this).find('div').stop(true,true,true).slideDown();
+            $(this).find('img').attr('src','images/index-new/106.gif');
+        },function(){
+            $(this).find('div').slideUp();
+            $(this).find('img').stop(true,true,true).attr('src','images/index-new/107.gif');
+        })
+        var q = location.pathname;
+        var qs = q.split("/");
+        var mainland = ['show-direct-delivery','show-knowledge-import','show-directfaq'];
+        var add_on = ['show-insurance','show-webservice','show-Packaging','show-payoneer','show-payment'];
+        var contact = ['show-company','show-contact','show-clause','show-customer','show-Cooperation','show-share','show-jobs','show-relation'];
+        var add_on_content = ['show-help','show-faq','show-download','show-solution'];
+        if(qs[2] != undefined){
+            $('#mainland,#export_m,#add_on,#contact,#add_on_content').css('color','#ff6600');
+            if($.inArray(qs[2],mainland)!=-1){
+                $('#mainland').css('color','#000000');
+            }else if($.inArray(qs[2],add_on)!=-1){
+                $('#add_on').css('color','#000000');
+            }else if($.inArray(qs[2],contact)!=-1){
+                $('#contact').css('color','#000000');
+            }else if($.inArray(qs[2],add_on_content)!=-1){
+                $('#add_on_content').css('color','#000000');
+            }else{
+                $('#export_m').css('color','#000000');
+            }
+        }
+    });
+
+</script>
+<div class="sfc_header header_bj" style="background:#fff; height:75px;">
+        <div class="header_top">
+    </div>
+        <div class="header_top">
+            <div style="position:relative; z-index:999999; *margin-top:-20px !important;">
+                <div class="language" style=" float:right;"><span><a target="_blank" href="">English</span></span></div>
+                <div style="float:right; padding-top:1px;">
+                    <span>
+                        <a href="oTTLoGin.html" target="_blank">登陆</a>
+                    </span> |
+                    <span>
+                        <a href="oRegister.html" target="_blank">注册</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    
+
+
+
+    <div class="sfc_headerm">
+    <div class="top">
+       <div class="sfc_logo"><a href="index.html" target="_blank"><img style="width:170px; float:left; padding-top:5px;" src="images/index-new/sfclogo.png" alt="荆棘鸟速递官网" /></a><span class="change_color" style="float:left; padding-top:16px; font-size:14px; padding-left:10px;">专业的跨境电子商务仓储物流解决方案提供商</span></div>
+       <div class="nav">
+       <div class="Navigation_m">
+           <ul id="nav">
+               <li style="float: left"><a href="index.html">首页</a></li>
+               <li style="float: left;position: relative;"><a href="javascript:void(0);" id='export_m'>出口物流服务</a>
+                   <img style='position:absolute;top:40px;left:42px' src="images/index-new/107.gif">
+                    <div class="nav_slide" style="width: 142px;height:160px;margin-left:-20px;" >
+                        <ul>
+                            <li>
+                                <a href="oYmx.html" style="float:none; display:block;">亚马逊FBA头程</a>
+                            </li>
+                            <li>
+                                <a href="oZhuoxian.html" style="float:none;display:block;">荆棘鸟专线</a>
+                            </li>
+                            <li>
+                                <a href="oGuoJiKD.html" style="float:none;display:block;">国际快递</a>
+                            </li>
+                            <li>
+                                <a href="oKuiaDiXB.html" style="float:none;display:block;">快邮小包</a>
+                            </li>
+                            <li>
+                                <a href="oJingJiXB.html" style="float:none;display:block;">经济小包</a>
+                            </li>
+                            <li>
+                                <a href="oChangChuFW.html" style="float:none;display:block;">仓储服务</a>
+                            </li>
+                        </ul>
+                    </div>
+               </li>
+               <li style="float: left;position: relative;"><a href="javascript:void(0);" id="mainland">进口物流服务</a>
+                   <img style='position:absolute;top:40px;left:42px' src="images/index-new/107.gif">
+                   <div class="nav_slide" style="width: 132px;height:80px;margin-left:-20px;" >
+                       <ul>
+                           <li><a href="oHaiWaiZG.html" style="float:none; display:block;">海外直购（B2C）</a></li>
+                           <li><a href="oJinKouZS.html" style="float:none; display:block;">进口知识</a></li>
+                           <li><a href="oFAQ.html" style="float:none; display:block;">FAQ</a></li>
+                       </ul>
+                   </div>
+               </li>
+               <li style="float: left;position: relative;"><a href="javascript:void(0);" id="add_on">海外云仓</a>
+                   <img style='position:absolute;top:40px;left:26px' src="images/index-new/107.gif">
+                  <div class="nav_slide" style="width: 130px;height:110px;margin-left:-20px;" >
+                       <ul>
+                           <li><a href="oHaiWaiYC.html" style="float:none; display:block;">海外云仓</a></li>
+                           <li><a href="oYingGuo.html" style="float:none; display:block;">英国仓</a></li>
+                           <li><a href="oMeiGuo.html" style="float:none; display:block;">美国仓</a></li>
+                           <li><a href="oDeGuo.html" style="float:none; display:block;">德国仓</a></li>
+
+                       </ul>
+                   </div>
+               </li>
+               <li style="float: left;position: relative;"><a href="javascript:void(0);" id="contact">关于我们</a>
+                   <img style='position:absolute;top:40px;left:26px' src="images/index-new/107.gif">
+                   <div class="nav_slide" style="width: 120px;height:190px;" >
+                       <ul>
+                           <li><a href="oGongSiJJ.html" style="float:none; display:block;">公司简介</a></li>
+                           <li><a href="oLianXiWM.html" style="float:none; display:block;">联系我们</a></li>
+                           <li><a href="oFuWuTK.html" style="float:none; display:block;">服务条款</a></li>
+                           <li><a href="oKeFuZX.html" style="float:none; display:block;">客服中心</a></li>
+                           <li><a href="oHeZuoHB.html" style="float:none; display:block;">合作伙伴</a></li>
+                           <li><a href="oAnLiFX.html" style="float:none; display:block;">案例分享</a></li>
+                           <li><a href="oRenCaiZP.html" style="float:none; display:block;">人才招聘</a></li>
+                       </ul>
+                   </div>
+               </li>
+               <li style="float: left;position: relative;"><a href="javascript:void(0);" id="add_on_content">帮助支持</a>
+                   <img style='position:absolute;top:40px;left:26px' src="images/index-new/107.gif">
+                   <div class="nav_slide" style="width: 120px;height:108px;" >
+                       <ul>
+                           <li>
+                               <a href="oXinShouZN.html" style="float:none; display:block;">新手指南</a>
+                           </li>
+                           <li>
+                               <a href="oChangJianWT.html" style="float:none; display:block;">常见问题</a>
+                           </li>
+                           <li>
+                               <a href="oXiaZaiZX.html" style="float:none; display:block;">下载中心</a>
+                           </li>
+                           <li>
+                               <a href="oJieJueFA.html" style="float:none; display:block;">解决方案</a>
+                           </li>
+                       </ul>
+                   </div>
+               </li>
+               <!-- <li style="float: left; display:none"><a href="javascript:void(0);">合作伙伴</a></li> -->
+           </ul>
+
+        </div></div>
+    </div>
+
+</div>
+</div>
+<!--header end-->    </div>
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link href="css/index-new/express_css.css" rel="stylesheet" type="text/css" />
+<link href="css/index-new/header.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="images/index-new/favicon.ico" />
+<script type="text/javascript" src="js/index-new/jquery-1.4.2.js"></script>
+<script type="text/javascript" src="js/index-new/slide.js"></script>
+<script type="text/javascript" src="js/index-new/carousel.js"></script>
+</head>
+<style type="text/css">
+.post_radio{padding-bottom:20px; height:50px;}
+.post_radio ul{padding-left:310px;}
+.post_radio .post_radiohover{}
+.post_radio ul li{float:left; width:200px; text-align:center; font-weight:bold; margin:0 20px;}
+.post_midl{cursor:pointer;}
+</style>
+<body>
+
+<script type="text/javascript">
+    $(function(){
+       $(".service_helpmid>ul").find('li').find('a').click(function(){
+           if($(this).next('.service_helpcon').css('display') == 'none'){
+               $(this).find('img').attr('src','images/amazon_low.gif');
+           }else{
+               $(this).find('img').attr('src','images/amazon_add.gif');
+           }
+           $(this).next('.service_helpcon').slideToggle();
+
+
+       });
+    });
+</script>
+
+<!--广告 start-->
+<div class="post">
+<div class="quickmail_mid">
+   <p style="font-size:50px; padding-bottom:20px;">快邮小包</p>
+   <p>Resource Integration with Reliable <br />Service Experience</p>
+</div>
+</div>
+
+<div class="pro_middle">
+<div style="position:relative;">
+   
+   <div class="pro_list">
+      <div class="pro_listm">
+      <h2 style="padding-left:20px; height:30px;"><span style="float:left;">快邮小包</span><img alt="" src="images/index-new/product_bottom.png" style="padding:10px 20px 0 0"></h2>
+<ul style="display: none;">
+    <li><a href="kxby.html">快邮西班牙小包</a></li>
+    <li><a href="kels.html">快邮俄罗斯小包</a></li>
+    <li><a href="kyj.html">快邮1级小包</a></li>
+    <li><a href="kej.html">快邮2级小包</a></li>
+    <!--<li><a href="/info/show-sfcqm3">快邮3级小包</a></li>-->
+    <li><a href="kydl.html">快邮意大利小包</a></li>
+    <li><a href="kdg.html">快邮德国小包</a></li>
+</ul>
+
+       </div>
+      <div class="pro_listf"><img src="images/index-new/product_bottom.gif" alt="" /></div>
+   </div>
+</div>
+
+
+<!--内容 start-->
+   <div class="product">
+      <h2>快邮德国小包</h2>
+      <div class="pro_con">
+         <h3>服务代码/<span class="pro_code">Service Code</span></h3>
+         <p>平邮/FrontierQMDE（服务属性：空+派专线）      挂号/FrontierQMDER（服务属性：空+派专线）</p>
+         <div class="pro_line"></div>
+         <div class="pro_adv">
+             <h3>产品优势/<span class="pro_code">Product Advantage</span></h3>
+             <ul>
+                <li style="width:11.5%; height:165px; margin-left:0;"><img src="images/index-new/pro_adv4.png" alt="价格低" /><br /><strong>价格低</strong><br />按克计费，适合轻小件包裹 </li>
+                <li style="width:11.5%;height:165px;"><img src="images/index-new/pro_adv1.png" alt="空+派专线模式" /><br /><strong>空+派专线模式</strong><br />时效快，最快6个工作日妥投</li>
+                <li style="width:11.5%;height:165px;"><img src="images/index-new/pro_adv11.png" alt="DDP清关" /><br /><strong>DDP清关</strong><br />预付VAT费用，无需二次清关</li>
+                <li style="width:11.5%;height:165px;"><img src="images/index-new/pro_adv7.png" alt="产品属性" /><br /><strong>产品属性</strong><br />可发内置、配套电池产品</li>
+                <li style="width:11.5%;height:165px;"><img src="images/index-new/pro_adv5.png" alt="固定舱位" /><br /><strong>固定舱位</strong><br />固定每天傍晚舱位，次日凌晨到达</li>
+                <li style="width:11.5%;height:165px;"><img src="images/index-new/pro_adv9.png" alt="增值服务" /><br /><strong>增值服务</strong><br />投保、转寄、退件安排</li>
+             </ul>
+             <div class="clear"></div>
+          </div>
+          <div class="pro_line"></div>
+         <h3>产品时效/<span class="pro_code">Product Aging</span></h3>
+         <div class="pro_aging">
+            <ul>
+               <li style="width:99.9%; border-right:1px solid #ccc;"><img src="images/index-new/pro_germany.jpg" alt="德国" /><br />德国<br />6-8个工作日</li>
+            </ul>
+            <ul>
+               <li style="width:99.9%; border:1px solid #ccc; border-top:none;color:#ff6600; padding:5px 0">可派送至德国全境，包括德国Pack station地址。（Pack station地址填写规则请联系销售经理/客服咨询。）
+</li>
+            </ul>
+            <div class="clear"></div>
+         </div>
+         <div class="pro_line"></div>
+         <h3>产品背景/<span class="pro_code">Product Background</span></h3>
+         <p class="pro_story"><img src="images/index-new/story_sfcqmit.png" alt="快邮意大利小包" /><span>快邮欧洲小包系列是荆棘鸟自创品牌，荆棘鸟整合欧洲最优质的邮政系统开发的一条国际空+派的邮政小包服务。从2009年开始荆棘鸟已经设计出空+派模式的鼻祖——"中欧专线"，并在跨境电商市场拥有良好的口碑，也为后期开发优质的空加派邮政类产品打下基础。</span></p>
+         <div class="clear"></div>
+         <div class="pro_line"></div>
+         <h3>产品介绍与历史/<span class="pro_code">Introduction and History</span></h3>
+         <p>荆棘鸟快邮德国小包，是荆棘鸟（Frontier）整合空运和海外优质物流资源开发的DDP服务，适合电商B2C包裹直发德国，该渠道包含平邮和挂号服务。头程荆棘鸟包下整台港车过港，空运长期签约国泰航空，旺季空运舱位提前预定，末端选择荷兰清关。德国海关一直是众多电商卖家头疼问题，不知多少卖家的平台账号受限在海关扣关清关慢等问题上，快邮德国小包是有效解决德国包裹延误的最佳选择。 
+</p>
+         <p><img style="padding-top:25px;" src="images/kuaiyou1.jpg" alt="历程" /></p>
+         <div class="pro_line"></div>
+         <h3>产品设计/<span class="pro_code">Product Design</span></h3>
+         <div class="pro_designtop">
+            <ul class="pro_designtoptop" style="padding-left:60px;">
+               <li style="width:63px;"><img src="images/index-new/pro_design1.png" alt="收货、分拣、装袋" /></li>
+               <li style="width:100px;background: url(images/index-new/pro_designbj.gif) repeat-x; height:62px;"></li>
+               <li style="width:63px;"><img src="images/index-new/pro_design2.png" alt="当天凌晨过港，下午交空运公司" /></li>
+               <li style="width:100px;background: url(images/index-new/pro_designbj.gif) repeat-x; height:62px;"></li>
+               <li style="width:63px;"><img src="images/index-new/pro_design3.png" alt="傍晚直飞荷兰" /></li>
+               <li style="width:100px;background: url(images/index-new/pro_designbj.gif) repeat-x; height:62px;"></li>
+               <li style="width:63px;"><img src="images/index-new/pro_design4.png" alt="到达荷兰，当天清关" /></li>
+               <li style="width:100px;background: url(images/index-new/pro_designbj.gif) repeat-x; height:62px;"></li>
+               <li style="width:63px;"><img src="images/index-new/pro_design7.png" alt="完成清关当天开始转运至欧洲承运商" /></li>
+               <li style="width:100px;background: url(images/index-new/pro_designbj.gif) repeat-x; height:62px;"></li>
+               <li style="width:63px;"><img src="images/index-new/pro_design6.png" alt="承运商安排派送包裹，派送时效参考当地承运商承诺时效" /></li>
+            </ul>
+            <div class="clear"></div>
+            <ul class="pro_designbottom">
+               <li style="width:170px;"><span>Day1</span></li>
+               <li style="width:170px;"><span>Day2</span></li>
+               <li style="width:170px;"><span>Day2</span></li>
+               <li style="width:170px;"><span>Day3</span></li>
+               <li style="width:170px;"><span>Day3-4</span></li>
+               <li style="width:170px;"><span>Day5</span></li>
+            </ul>
+            <div class="clear"></div>
+            <ul class="pro_designbottom pro_wen">
+               <li style="width:170px;">收货、分拣、装袋</li>
+               <li style="width:170px;">当天凌晨过港，下午交空运公司</li>
+               <li style="width:170px;">傍晚直飞荷兰</li>
+               <li style="width:170px;">到达荷兰，当天清关</li>
+               <li style="width:170px;">完成清关当天开始转运至欧洲承运商</li>
+               <li style="width:170px;">承运商安排派送包裹，派送时效参考当地承运商承诺时效</li>
+            </ul>
+            <div class="clear"></div>
+         </div>
+         <div class="pro_line"></div>
+         <h3>产品限制/<span class="pro_code">Product Restriction</span></h3>
+         <p style="position:relative; width:1100px;">不接受纯电池仿牌及航空违禁品。<img style="position:absolute; right:0; margin-top:-20px;" src="images/index-new/pro_restriction3.png" alt="不接受纯电池仿牌及航空违禁品。" /></p>
+          <!--<div class="pro_line"></div>
+         <h3>发货须知/<span class="pro_code">Notice of Delivery</span></h3>
+         <p><strong>下单要求</strong><br /></p>
+         <p style="padding-top:10px;"><strong>操作要求</strong><br /></p>-->
+         <div class="pro_line"></div>
+         <h3>产品详情/<span class="pro_code">Notice Details</span></h3>
+         <div class="pro_ten">
+            <div class="pro_ten_top">
+            <div class="pro_tenone"><img src="images/index-new/pro_011.png" alt="计重模式" /><br />计重模式</div>
+            <div class="pro_tentwo"><img src="images/index-new/pro_02.png" alt="重量限制" /><br />重量限制</div>
+            <div class="pro_tenthree"><img src="images/index-new/pro_03.png" alt="体积限制" /><br />体积限制</div>
+            <div class="pro_tenfour"><img src="images/index-new/pro_05.png" alt="附加费" /><br />附加费</div>
+            <div class="pro_tenfive"><img src="images/index-new/pro_06.png" alt="跟踪查询" /><br />跟踪查询</div>
+         </div>
+         <div class="pro_bottom">
+            <div class="pro_tensix"><img src="images/index-new/pro_012.png" alt="开查要求" /><br />开查要求</div>
+            <div class="pro_tenseven"><img src="images/index-new/pro_07.png" alt="关税相关" /><br />关税相关</div>
+            <div class="pro_teneight"><img src="images/index-new/pro_08.png" alt="保险理赔" /><br />保险理赔</div>
+            <div class="pro_tennine"><img src="images/index-new/pro_09.png" alt="退件相关" /><br />退件相关</div>
+            <div class="pro_tenten"><img src="images/index-new/pro_10.png" alt="禁限寄物品" /><br />禁限寄物品</div>
+         </div>
+            <div class="clear"></div>
+         </div>
+         <div style="position:relative;">
+         <!--记重模式 start-->
+         <div class="pro_tenone_hover one_click" style=" top:-410px; left:-40px;display: none;">
+            按照实重计费
+         </div>
+         <!--记重模式 end-->
+         <!--重量限制 start-->
+         <div class="pro_tenone_hover two_click" style=" top:-410px; left:175px;display: none;">0-2kg</div>
+         <!--重量限制 end-->
+         <!--体积限制 start-->
+         <div class="pro_tenone_hover three_click" style=" top:-410px; left:390px;display: none;">
+          最大体积限制：长+宽+高≤90cm; 最长边≤60cm<br />
+最小体积限制：10.5*21cm
+         </div>
+         <!--体积限制 end-->
+         <!--附加费 start-->
+         <div class="pro_tenone_hover four_click" style=" top:-410px; left:605px;display: none;">
+            无
+         </div>
+         <!--附加费 end-->
+         <!--跟踪查询 start-->
+         <div class="pro_tenone_hover five_click" style=" top:-410px; left:820px;display: none;">
+
+         可支持在荆棘鸟官网、17track网站、aftership网站（<a href="https://www.aftership.com/" target="_blank">https://www.aftership.com/</a>）或德国DHL官网查询。（德国DHL网址: <a href="http://www.dhl.de/en.html" target="_blank">http://www.dhl.de/en.html</a>）
+         </div>
+         <!--跟踪查询 end-->
+         <!--开查要求 start-->
+         <div class="pro_tenone_hover six_click" style=" top:-210px; left:-40px;display: none;">
+       从荆棘鸟发出后15天内提出查询。
+         </div>
+         <!--开查要求 start-->
+         <!--关税相关 start-->
+         <div class="pro_tenone_hover seven_click" style=" top:-210px; left:175px;display: none;">
+            <!--<div style="width: 100%;height:6px;position:absolute;background:#626262;bottom: 0px;left: 0px;z-index: 0;"></div>
+             <span style="position: absolute;right: 5px;bottom: 6px;text-decoration: underline;cursor: pointer;background:#ff8a00; padding:3px 10px; border-radius:5px; color:#fff;font-size:14px;" onclick="show_more()" class="show_more">更多</span>-->
+           货物申报价值低于22EUR，无VAT、关税产生；货物申报价值大于22EUR，且小于150EUR，发货时按照申报价值为基数征收21% VAT；申报价值大于150EUR，可能会产生关税，荆棘鸟会在次月海关账单下来后补扣该部分费用。（海关编码及关税税率可参照中欧三的海关编码资料）
+         </div>
+         <!--关税相关 end-->
+         <!--保险理赔 start-->
+         <div class="pro_tenone_hover eight_click" style=" top:-210px; left:390px;display:none">
+         <div style="width: 100%;height:6px;position:absolute;background:#626262;bottom: 0px;left: 0px;z-index: 0;"></div>
+             <span style="position: absolute;right: 5px;bottom: 6px;text-decoration: underline;cursor: pointer;background:#ff8a00; padding:3px 10px; border-radius:5px; color:#fff;font-size:14px;" onclick="show_more()" class="show_more">更多</span>
+申报价值低于25 USD的订单，不强制投保；<br /> 申报价值大于25 USD的订单，需强制投保。<br />保险费按照运费与申报价值之和的基础上收取0.6%， 投保价值不得超过申报价值的150%。最高投保价值不大于50 USD。<br />
+若包裹在运输途中丢失，我司将按照运费+货物投保价值赔偿。<br />
+易碎品等其他不在保险公司投保范围内的，不予赔偿。
+
+         </div>
+         <!--保险理赔 end-->
+         <!--退件相关 start-->
+         <div class="pro_tenone_hover nine_click" style=" top:-210px; left:605px;display:none">
+            退件销毁：免费<br />
+退件改派：全程运费+处理费30RMB/件
+         </div>
+         <!--退件相关 end-->
+         <!--禁限制物品 start-->
+         <div class="pro_tenone_hover ten_click" style=" top:-210px; left:820px;display:none">
+            <div style="width: 100%;height:6px;position:absolute;background:#626262;bottom: 0px;left: 0px;z-index: 0;"></div>
+             <span style="position: absolute;right: 5px;bottom: 6px;text-decoration: underline;cursor: pointer;background:#ff8a00; padding:3px 10px; border-radius:5px; color:#fff;font-size:14px;" onclick="show_more()" class="show_more">更多</span>
+          1）危品，化学药品，易燃易爆物，放射性物质，易腐有机物，以及邮政立法禁止或者限制邮寄的物品。<br />
+2）毒品，麻醉剂以及精神药品。<br />
+3）武器，刀具，匕首以及其他尖的或者锋利的物品<br />
+4）活体动物或者寄生物，以及邮政立法禁止或者限制邮寄的物品。<br />
+5）邮包外部题字包含与良好道德以及公众秩序相悖的内容。<br />
+6）非法形式进出口，流通，分销，使用和所有的包裹。<br />
+7）因其形状，性质以及包装方式可能给其他人带来威胁或者会损害的包裹。<br />
+8）无记名有价证券，钱币，珠宝以及其他贵重物品必须密封邮寄并注明申明价值或者是密封的挂号邮包方式邮寄。如果目的国提供申明价值服务，此类包裹不得按照密封的挂号邮包方式邮寄。<br />
+9）违反法律的包裹或者会对其他特殊法律法规造成侵害的包裹。<br />
+10）食品，带液体的产品等。<br />
+11）不接受仿牌产品。
+         </div>
+         <!--禁限制物品 end-->
+         </div>
+         <div class="clear"></div>
+      </div>
+   <!--内容 end-->
+   </div>
+</div>
+<!--content end-->
+<!--服务常见问题 start-->
+   <div class="service_profot">
+       <!--常见问题 start-->
+    <div class="service_profotmid">
+       <div class="service_helpmid">
+          <h3>服务常见问题</h3>
+          <ul style="padding-top:20px;">
+             <li><a href="javascript:void(0)" style="height:35px; display:block;"><span style="float:left"><img width="26px" style="padding-right:10px;" src="images/amazon_add.gif" alt="" /></span><span style="float:left;">操作及包装要求？</span></a>
+                <div class="service_helpcon" style="display:none;">
+                    <ul>
+                       <li>1）上传订单：发货前需要在荆棘鸟物流系统中建立订单，平邮货运代码为FrontierQMDE, 挂号货运代码为FrontierQMDER.</li>
+                       <li>2）包装要求：请使用空白包材，外包装不能有其他邮局或者快递公司的字符标志【不要印有任何报关单或中文字样包材，以免造成海关二次抽查】</li>
+                    </ul>
+                </div>
+             </li>
+             <li><a href="javascript:void(0)" style="height:35px; display:block;"><span style="float:left"><img width="26px" style="padding-right:10px;" src="images/amazon_add.gif" alt="" /></span><span style="float:left;">挂号是否可以下单就出跟踪号？</span></a>
+                <div class="service_helpcon" style="display:none;">
+                    <ul>
+                       <li>我司与DHL的系统对接尚未完成，暂时不支持在下单时出跟踪号，需要在荷兰清关后才可出最终跟踪号。理论上预计9月系统完成对接后就可以下单出跟踪号。</li>
+                    </ul>
+                </div>
+             </li>
+             
+             <li><a href="javascript:void(0)" style="height:35px; display:block;"><span style="float:left"><img width="26px" style="padding-right:10px;" src="images/amazon_add.gif" alt="" /></span><span style="float:left;">挂号的跟踪号在ebay、亚马逊后台是否承认？</span></a>
+                <div class="service_helpcon" style="display:none;">
+                    <ul>
+                       <li>Ebay 是承认德国DHL跟踪号的。亚马逊后台没有强制要求填写跟踪号，使用这个渠道的话，正常把服务商名称（德国DHL）填在平台上就可以了。</li>
+                    </ul>
+                </div>
+             </li>
+             <li><a href="javascript:void(0)" style="height:35px; display:block;"><span style="float:left"><img width="26px" style="padding-right:10px;" src="images/amazon_add.gif" alt="" /></span><span style="float:left;">为什么邮箱和手机号是必填的？</span></a>
+                <div class="service_helpcon" style="display:none;">
+                    <ul>
+                       <li>挂号末端是由DHL快递公司派送， 若填入收件人的邮箱或手机号，只要DHL接收到包裹并扫描之后，收件人就会收到手机短信或邮件通知预计送达时间。填入手机号的话，即使派送时地址存在异常，快递员也会电话与收件人联系，确保包裹成功妥投。（填写非德国的手机号码是无法收到短信或电话的）</li>
+                    </ul>
+                </div>
+             </li>
+             <li><a href="javascript:void(0)" style="height:35px; display:block;"><span style="float:left"><img width="26px" style="padding-right:10px;" src="images/amazon_add.gif" alt="" /></span><span style="float:left;">为什么强制要求使用空白非印刷包材，也不能出现中文字样？</span></a>
+                <div class="service_helpcon" style="display:none;">
+                    <ul>
+                       <li>欧洲海关对带有中文字样的包裹非常敏感，若客人所用包材带有中文字样，即便是DDP的包裹也有可能要二次抽查或造成延误。</li>
+                    </ul>
+                </div>
+             </li>
+             <li><a href="javascript:void(0)" style="height:35px; display:block;"><span style="float:left"><img width="26px" style="padding-right:10px;" src="images/amazon_add.gif" alt="" /></span><span style="float:left;">能否接收带电产品？</span></a>
+                <div class="service_helpcon" style="display:none;">
+                    <ul>
+                       <li>可以接收带内置、配套电池的产品。</li>
+                    </ul>
+                </div>
+             </li>
+             <li><a href="javascript:void(0)" style="height:35px; display:block;"><span style="float:left"><img width="26px" style="padding-right:10px;" src="images/amazon_add.gif" alt="" /></span><span style="float:left;">能否发国内知名品牌产品？如小米、华为等？</span></a>
+                <div class="service_helpcon" style="display:none;">
+                    <ul>
+                       <li>可以。但建议如实申报。</li>
+                    </ul>
+                </div>
+             </li>
+             <li><a href="javascript:void(0)" style="height:35px; display:block;"><span style="float:left"><img width="26px" style="padding-right:10px;" src="images/amazon_add.gif" alt="" /></span><span style="float:left;">为什么在百度搜索的DHL官网无法查询订单信息？</span></a>
+                <div class="service_helpcon" style="display:none;">
+                    <ul>
+                       <li>因为本渠道的包裹是空+派的形式，清关后是交给德国当地的DHL快递公司派送，相当于德国发出的国内件，所以要用德国DHL的官网进行查询。查询网站为<a href="http://www.dhl.de/en.html" target="_blank">http://www.dhl.de/en.html</a>
+目前除了可以在德国DHL官网、荆棘鸟官网查询外，还可支持在17track查询。</li>
+                    </ul>
+                </div>
+             </li>
+             <li><a href="javascript:void(0)" style="height:35px; display:block;"><span style="float:left"><img width="26px" style="padding-right:10px;" src="images/amazon_add.gif" alt="" /></span><span style="float:left;">是否可以发送到Packstation地址？</span></a>
+                <div class="service_helpcon" style="display:none;">
+                    <ul>
+                       <li>可以。Packstation地址由两部分组成，分别是Account Number（个人唯一的账号）和Packstation number (箱号)。发送到此类地址时，请把Account number填写在"公司名"栏，Packstation number 填在"地址行1"。两部分信息缺一不可，且不能填入无关信息或错误的信息，否则包裹可能被退回。</li>
+                    </ul>
+                </div>
+             </li>
+          </ul>
+       </div>
+
+    <div class="clear"></div>
+</div>
+
+
+
+  
+    </div>
+    <!--常见问题 end-->
+   </div>
+   <!--服务常见问题 end-->
+</body>
+</html>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="footer">
+    <!--底部 start-->
+    <div class="footer_conter">
+        <div class="footer_top">
+            <div class="footer_logo"><img src="images/index-new/foot_logo.png" alt="荆棘鸟速递" /></div>
+            <div class="footer_list">
+                <ul>
+                    <li>
+                        <h3>关于我们</h3>
+                        <a href="oGongSiJJ.html">公司介绍</a><br>
+                        <a href="oLianXiWM.html">联系我们</a><br>
+                        <a href="oRenCaiZP.html">加入Frontier</a><br>
+               
+                    </li>
+                    <li>
+                        <h3>客户支持</h3>
+                        <!-- <a href="/track/track/track">包裹查询</a><br> -->
+                        <a href="oLianXiWM.html">服务咨询</a><br>
+                        <a href="oHeZuoHB.html">业务洽谈</a><br>
+                        <a href="oXinShouZN.html">新手指南</a><br>
+                        <a href="oChangJianWT.html">常见问题</a><br>
+                    </li>
+                    <li>
+                        <h3>个性化服务</h3>
+                        <a href="oAPITY.html">API服务</a><br>
+                        <a href="oHaiWaiYC.html">海外云仓</a><br>
+                        <a href="oBaoGuoCX.html">包裹查询</a><br><a href="zaixianzixun.html">在线联系</a><br>
+
+                    </li>
+                   
+                    <li style="width:150px; padding-left:10px; text-align:center;"><img src="images/index-new/weixin.jpg" alt="荆棘鸟速递微信号" /><br>微信扫一扫</li>
+                    <li style="width:120px; text-align:center;"><img src="images/index-new/weibo.jpg" alt="荆棘鸟速递官方微博" /><br>微博扫一扫<br /><a href="http://weibo.com/3227924404/profile?topnav=1&wvr=6" target="_blank" style="font-weight:bold; color:#ff6600; font-size:14px; padding-left:12px;">点此进入网页版</a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="hotline" style=" width:300px;color:#ff8100; position:absolute; right:20px; font-style:italic; font-size:20px; margin-top:30px; font-weight:bold;">全国服务热线：021-62500255</div>
+        <ul class="footer_bottom">
+            <li><a href="oFuWuTK.html">服务条款</a></li>
+            <li><a href="oYinSiSM.html">隐私声明</a></li>
+        </ul>
+        <div class="clear"></div>
+        <p><a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action;jsessionid=ZcsY7-lkypdufSERWmuRiMA0Nn6cTUWbNtUqv2DJKC8M9duVrNjq!-839491397
+">Copyright© 2016, 版权所有 上海屹栗国际货运代理有限公司  &nbsp 沪ICP备15050822号-1</a>
+</p>
+    </div>
+<!--底部 end-->
+</div> 
+
+<!-- <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-21767048-1', 'auto');
+  ga('send', 'pageview');
+
+</script> -->
+</body>
+</html>

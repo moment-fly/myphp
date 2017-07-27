@@ -1,0 +1,1645 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link href="css/index-new/express_css.css" rel="stylesheet" type="text/css" />
+<link href="css/index-new/header.css" rel="stylesheet" type="text/css" />
+<link href="images/index-new/favicon.ico" rel="shortcut icon">
+<title>会员注册-荆棘鸟速递</title>
+<script type="text/javascript" src="js/jquery-1.6.2.js"></script>
+<meta name="baidu-site-verification" content="6vi7K4d0qR" />
+<!-- <script>
+    var hmt = hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?391eb43f0988503e05ac9b063ba63524";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script> -->
+<!-- <script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-83593823-1', 'auto');
+  ga('send', 'pageview');
+
+</script> -->
+ 
+<script src="js/index-new/jquery.validationEngine.js" type="text/javascript"></script>
+<script src="js/index-new/jquery.custom.validationEngine.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/index-new/formValidator.js"></script>
+<script type="text/javascript" src="js/index-new/formValidatorRegex.js"></script>
+
+<script type="text/javascript">
+function checkusername(){
+    result=false;
+    var username=$("#username").val();
+    if(username==''){
+        $('#usernameTip').removeClass().addClass('onError').html("<img src='images/index-new/error.png' alt='error'/> 不可为空");
+        return false;
+    }else{
+        if(/^[\w\d\u4e00-\u9fa5]+$/i.test(username)){
+            var length=0;
+            for(var i=0;i<username.length;i++){
+                if(/[0-9a-zA-z_]/.test(username.charAt(i))){
+                    length++;
+                }else{
+                    length+=2;
+                }
+            }
+            if(length>20 || length<4){
+                $('#usernameTip').removeClass().addClass('onError').html("<img src='images/index-new/error.png' alt='error'/>用户名长度为4-20");
+                return false;
+            }
+            $.ajax({
+                url:'#'+username,
+                type:'POST',
+                dataType:'text',
+                async:false,
+                beforeSend:function(){$('#usernameTip').removeClass().html("<img src='images/index-new/onLoad.gif'/>正在检查用户名是否存在，请稍候...");},
+                success:function(res){
+                    if(res=='1'){
+                        $("#usernameTip").removeClass().addClass('onCorrect').html("<img src='images/index-new/right.png' alt='right'/>");
+                        result=true;
+                    }else{
+                        $("#usernameTip").removeClass().addClass('onError').html("该用户名已存在，请重新输入");
+                    }
+                }
+            })
+            return result;
+        }else{
+            $('#usernameTip').removeClass().addClass('onError').html("<img src='images/index-new/error.png' alt='error'/>用户名只能为 字母，中文，数字，下划线");
+            return false;
+        }
+
+    }
+}
+function checkpassword(){
+    password=$("#password").val();
+    if(password==''){
+        $('#passwordTip').removeClass().addClass('onError').html("<img src='images/index-new/error.png' alt='error'/>密码不可为空");
+        return false;
+    }else if(password.length<6){
+        $('#passwordTip').removeClass().addClass('onError').html("<img src='images/index-new/error.png' alt='error'/>密码长度至少6位,请确认");
+        return false;
+    }else{
+        $('#passwordTip').removeClass().addClass('onCorrect').html("<img src='images/index-new/right.png' alt='right'/>");
+        return true;
+    }
+}
+function checkpassword2(){
+    password2=$("#password2").val();
+    if(password2){
+        if(password2==$("#password").val()){
+            $('#password2Tip').removeClass().addClass('onCorrect').html("<img src='images/index-new/right.png' alt='right'/>");
+            return true;
+        }else{
+            $('#password2Tip').removeClass().addClass('onError').html("<img src='images/index-new/error.png' alt='error'/>两次密码不一致,请确认");
+            return false;
+        }
+    }else{
+        $('#password2Tip').removeClass().addClass('onError').html("<img src='images/index-new/error.png' alt='error'/>请输入确认密码");
+        return false;
+    }
+}
+function mobileValidate(){
+    var _this=this;
+    this.leaveGetMobileTime=2;
+    this.correct=false;
+    this.checkmobile=function(){
+        var mobile=$("#mobile").val();
+        result=false;
+        if(mobile.length>0){
+            pre=$("#country_id").find("option:selected").val();
+            if(/^\d+$/.test(mobile)){
+                if(pre=='49'){
+                    var mobileRul=new RegExp(/^(13[0-9]|15[0-3]|15[5-9]|18[0-9]|145|147|170|176|177|178)\d+$/);
+                    if(!mobileRul.test(mobile)){
+                        $('#mobileTip').removeClass().addClass('onError').html("<img src='images/index-new/error.png' alt='error'/>请输入正确的手机号码");
+                        return false;
+                    }
+                    if(mobile.length!=11){
+                        $('#mobileTip').removeClass().addClass('onError').html("<img src='images/index-new/error.png' alt='error'/>请输入11位数字的手机号码");
+                        return false
+                    }
+                }
+                $.ajax({
+                    url:'#'+mobile,
+                    type:'POST',
+                    dataType:'text',
+                    async:false,
+                    beforeSend:function(){$('#mobileTip').removeClass().html("<img src='images/validator/onLoad.gif'/>正在检查联系手机是否存在，请稍候...");},
+                    success:function(res){
+                        if(res=='1'){
+                            $('#mobileTip').removeClass().addClass('onCorrect').html("<img src='images/index-new/right.png' alt='right'/>");
+
+                            _this.correct=result=true;
+                        }else{
+                            $('#mobileTip').removeClass().addClass('onError').html('该联系手机已存在，请重新输入');
+                        }
+
+                    }
+                })
+                return result;
+            }else{
+                $('#mobileTip').removeClass().addClass('onError').html("<img src='images/index-new/error.png' alt='error'/>你输入的数据非手机号码");
+                return false;
+            }
+        }else{
+            $('#mobileTip').removeClass().addClass('onError').html("<img src='images/index-new/error.png' alt='error'/>请输入您的手机");
+            return false;
+        }
+    }
+    this.getMobileVeryCode=function(){
+        if(_this.leaveGetMobileTime==0)return ;
+        if(this.time!=59)return;
+        if(this.correct){
+            var mobile=$("#mobile").val();
+            $("#moblieVerifyCodeTip").html('');
+            $.ajax({
+                url:'#',
+                type:'POST',
+                data:'mobile='+mobile,
+                dataType:'json',
+                async:false,
+                beforeSend:function(){$('#sendAcodeStg').html("<img src='images/validator/onLoad.gif'/>正在发送手机验证码，请稍候...");},
+                success:function(json){
+                    if(json.error){
+                        $("#sendAcodeStg").html('免费获取短信验证码');
+                        $('#sendCodeBtnTip').html("<img src='images/index-new/error.png' alt='error'/>发送失败，请重新获取");
+                    }else{
+                        if(json.send_message){
+                            $("#sendCodeBtnTip").html('短信验证码已发送，30分钟内有效');
+                            //console.log(_this);
+                            _this.intervaChange();
+                            _this.leaveGetMobileTime=json.leaveTime;//json.leaveTime;
+                        }else if(json.leaveTime==0){
+                            _this.leaveGetMobileTime=0;
+                            $("#sendAcodeStg").html('免费获取短信验证码<span style="font-size:10px;color:#6a6a6a;float:none;">（今天剩余0次）</span>');
+                        }else{
+                            $("#sendAcodeStg").html('免费获取短信验证码');
+                            $('#sendCodeBtnTip').html("<img src='images/index-new/error.png' alt='error'/>发送失败，请重新获取");
+                        }
+                    }
+                }
+            })
+        }else{
+            $("#mobile").focus();
+            this.checkmobile();
+        }
+    }
+    this.time=59;
+    this.changeHtml=function(){
+        $("#sendAcodeStg").html(this.time+'秒后可重新获取短信验证码');
+        this.time--;
+        if(this.time==-1){
+            this.time=59;
+            clearInterval(this.intervalId);
+            $("#sendAcodeStg").html('免费获取短信验证码<span style="font-size:10px;color:#6a6a6a;float:none;">（今天剩余'+this.leaveGetMobileTime+'次）</span>')
+        }
+    };
+    this.intervaChange=function(){
+        this.intervalId=setInterval('mobileValidateCheck.changeHtml()',1000);
+    }
+    this.verifyCodeValidate=function(){
+        var checkResult=false;
+        var pre=$("#country_id").find("option:selected").val();
+        //if(pre==49){
+        //if($('[name=mobileVerifyCode]').val()==''){
+        //$('#MobileVerifyCodeTip').removeClass().addClass('onError').html('(请输入验证码)');
+        //return false;
+        //}else{
+        $.ajax({
+            url:'#',
+            data:'type=phone&code='+$('[name=mobileVerifyCode]').val()+'&phone='+$("#mobile").val(),
+            dataType:'json',
+            async:false,
+            beforeSend:function(){$("#MobileVerifyCodeTip").removeClass().html("<img 	src='images/validator/onLoad.gif'/>正在检查验证码，请稍候...");},
+            success:function(json){
+                if(json.success=='1'){
+                    $('#MobileVerifyCodeTip').removeClass().addClass('onCorrect').html("<img src='images/index-new/right.png' alt='right'/>");
+                    checkResult=true;
+                }else{
+                    $('#MobileVerifyCodeTip').removeClass().addClass('onError').html("<img src='images/index-new/error.png' alt='error'/>验证码错误");
+                }
+            }
+        })
+        return checkResult;
+        //	}
+        //}
+        $('[name=mobileVerifyCode]').val('');
+        return true;
+    }
+}
+var mobileValidateCheck= new mobileValidate();
+function emailValidate(){
+    var _this=this;
+    this.leaveGetEmailTime=5;
+    this.correct=false;
+    this.emailcheck=function(){
+        var result=false;
+        var email=$("#email").val();
+        if(email.length!=''){
+            if(/^[a-zA-Z0-9_\.-]+\@([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,4}$/.test(email)){
+                $.ajax({
+                    url:'#'+email,
+                    type:'POST',
+                    dataType:'text',
+                    async:false,
+                    beforeSend:function(){$('#emailTip').removeClass().html("<img src='images/validator/onLoad.gif'/>正在检查邮箱是否存在，请稍候...");},
+                    success:function(res){
+                        if(res=='1'){
+                            $('#emailTip').removeClass().addClass('onCorrect').html("<img src='images/index-new/right.png' alt='right'/>");
+                            _this.correct=result=true;
+                        }else{
+                            $('#emailTip').removeClass().addClass('onError').html("<img src='images/index-new/error.png' alt='error'/>该邮箱已存在，请重新输入");
+                        }
+                    }
+                })
+                return result;
+            }else{
+                $("#emailTip").removeClass().addClass('onError').html("<img src='images/index-new/error.png' alt='error'/>您输入的邮箱格式不正确");return false;
+            }
+        }else{
+            $("#emailTip").removeClass().addClass('onError').html("<img src='images/index-new/error.png' alt='error'/>邮箱不可为空");return false;
+        }
+    }
+    this.getEmailVeryCode=function(){
+        if(_this.leaveGetEmailTime==0)return ;
+        if(this.time!=59)return;
+        if(this.correct){
+            var email=$("#email").val();
+            $("#getMailStgTip").html('');
+            $.ajax({
+                url:'#',
+                type:'POST',
+                data:'email='+email,
+                dataType:'json',
+                async:false,
+                beforeSend:function(){$('#getMailStg').html("<img src='images/validator/onLoad.gif'/>正在发送邮箱验证码，请稍候...");},
+                success:function(json){
+                    if(json.error){
+                        $("#getMailStg").html('免费获取邮箱验证码');
+                        $('#getMailStgTip').html("<img src='images/index-new/error.png' alt='error'/>发送失败，请重新获取");
+                    }else{
+                        if(json.send_message){
+                            $("#getMailStgTip").html('验证码已发送，30分钟内有效');
+                            //console.log(_this);
+                            _this.intervaChange();
+                            _this.leaveGetEmailTime=json.leaveTime;//json.leaveTime;
+                        }else if(json.leaveTime==0){
+                            _this.leaveGetEmailTime=0;
+                            $("#getMailStg").html('免费获取邮箱验证码<span style="font-size:10px;color:#6a6a6a;float:none;">（今天剩余0次）</span>');
+                        }else{
+                            $("#getMailStg").html('免费获取邮箱验证码');
+                            $('#getMailStgTip').html("<img src='images/index-new/error.png' alt='error'/>发送失败，请重新获取");
+                        }
+                    }
+                }
+            })
+        }else{
+            $("#email").focus();
+            this.emailcheck();
+        }
+    }
+    this.time=59;
+    this.changeHtml=function(){
+        $("#getMailStg").html(this.time+'秒后可重新获取邮箱验证码');
+        this.time--;
+        if(this.time==-1){
+            this.time=59;
+            clearInterval(this.intervalId);
+            $("#getMailStg").html('免费获取邮箱验证码<span style="font-size:10px;color:#6a6a6a;float:none;">（今天剩余'+this.leaveGetEmailTime+'次）</span>')
+        }
+    };
+    this.intervaChange=function(){
+        this.intervalId=setInterval('mailValidateCheck.changeHtml()',1000);
+    }
+    this.verifyCodeValidate=function(){
+        var checkResult=false;
+        var pre=$("#country_id").find("option:selected").val();
+        //if(pre!=49){
+        if($('[name=mailVerifyCode]').val()==''){
+            $('#mailVerifyCodeTip').removeClass().addClass('onError').html("<img src='images/index-new/error.png' alt='error'/>(请输入验证码)");
+            return false;
+        }else{
+            $.ajax({
+                url:'#',
+                data:'type=email&code='+$('[name=mailVerifyCode]').val()+'&email='+$("#email").val(),
+                dataType:'json',
+                async:false,
+                beforeSend:function(){$("#mailVerifyCodeTip").removeClass().html("<img 	src='images/validator/onLoad.gif'/>正在检查验证码，请稍候...");},
+                success:function(json){
+                    if(json.success=='1'){
+                        $('#mailVerifyCodeTip').removeClass().addClass('onCorrect').html("<img src='images/index-new/right.png' alt='right'/>");
+                        checkResult=true;
+                    }else{
+                        $('#mailVerifyCodeTip').removeClass().addClass('onError').html("<img src='images/index-new/error.png' alt='error'/>验证码错误");
+                    }
+                }
+            })
+
+            return checkResult;
+        }
+        //}
+        $('[name=mailVerifyCode]').val('');
+        return true;
+    }
+}
+var mailValidateCheck= new emailValidate();
+$(function(){
+    $("#sendCodeBtn").click(function(){mobileValidateCheck.getMobileVeryCode()});
+    $("#getMailCodeBtn").click(function(){mailValidateCheck.getEmailVeryCode()});
+    //var region_id=$("[name=country_id]").val();
+
+    $('.MobileVerifyCode').hide();
+    $('.mailVerifyCode').show();
+
+})
+function changeText(obj) {
+    var str1 = $(obj).val();
+    if(str1==1){
+        $("#done1").html('<input type="checkbox" id="serv_item" name="serv_item" />同意荆棘鸟速递物流+仓储服务条款内容');
+        $("#termscff").show();
+        $("#termsc").hide();
+
+    }else{
+        $("#done1").html('<input type="checkbox" id="serv_item" name="serv_item" />同意荆棘鸟速递物流条款内容');
+        $("#termscff").hide();
+        $("#termsc").show();
+    }
+}
+function checkTerm() {
+    if (!$('#serv_item').is(':checked')) {
+        alert('请选择同意条款内容');
+        return false;
+    }else{
+        return true;
+    }
+}
+function checkregion(){
+    if($("#region_id").val() && $("#last_region_id").val()){
+        $("#provinceTip").removeClass().addClass('onCorrect').html("<img src='images/index-new/right.png' alt='right'/>");
+        return true;
+    }else{
+        $("#provinceTip").removeClass().addClass('onError').html("<img src='images/index-new/error.png' alt='error'/>请选择您所在地区");
+        return false;
+    }
+}
+function addphone(a){
+    $("#phoneTip"+a).removeClass().addClass('onFocus').html("请输入电话号码");
+}
+function samephone(t){//判断是否有已经输入相同的电话号码
+	currentPhone=$(".phone"+t).val();//当前的电话号码
+	currentFenji=$(".fenji"+t).val();//当前的分机
+	currentFenji=currentFenji=="ext."?"":currentFenji;
+	for(var i=1;i<6;i++){
+		if(i==t){
+			continue;
+		}else{
+    comparePhone=$(".phone"+i).val();//其他要和当前比较的电话
+    compareFenji=$(".fenji"+i).val();//其他要和当前比较的分机号
+    compareFenji=compareFenji=="座机"?"":compareFenji;
+    if(currentPhone!=''){//其他要匹配的电话号不可为空
+				if(comparePhone==currentPhone){//有相同的时候做判断
+					if(currentFenji==''){
+						if(compareFenji==''){
+							$("#phoneTip"+t).removeClass().addClass('onError').html("<img src='images/index-new/error.png' alt='error'/>该联系电话您已输入，请重新输入");
+							return false;
+						}
+            }else{
+        if(currentFenji==compareFenji){
+            $("#phoneTip"+t).removeClass().addClass('onError').html("<img src='images/index-new/error.png' alt='error'/>该联系电话您已输入，请重新输入");
+            return false;
+        }
+    }
+}
+}
+}
+}
+return true;
+}
+function checkphone(b){
+    if(samephone(b)==false){
+        return false;
+    }
+    result=false;
+    phoneRes=false;
+    phone=$(".phone"+b).val();
+    if(phone=='区号'){phone='';}
+        fenji=$(".fenji"+b).val();
+    if(fenji=='座机'){fenji='';}
+        if(phone==''){
+            if(fenji==''){
+                $("#phoneTip"+b).removeClass().addClass('onCorrect').html("<img src='images/index-new/right.png' alt='right'/>输入内容为空");
+                result=true;
+            }else{
+                $("#phoneTip"+b).removeClass().addClass('onError').html("<img src='images/index-new/right.png' alt='right'/>请输入区号");
+            }
+        }else{
+            if(/^\d+$/.test(phone)){
+                if(fenji==''){
+                    $("#phoneTip"+b).removeClass().addClass('onError').html("<img src='images/index-new/error.png' alt='error'/>请输入座机");
+                    return false;
+                }else{
+                    if(/^(\d+-\d+)|(\d+)$/.test(fenji)){
+                        number=phone+'-'+fenji;
+                        phoneRes=true;
+                    }else{
+                        $("#phoneTip"+b).removeClass().addClass('onError').html("<img src='images/index-new/error.png' alt='error'/>座机号码有误");
+                    }
+                }
+                /*if(b>=2){
+                    for()
+                }*/
+                if(phoneRes){
+                    $.ajax({
+                        url:'#'+number,
+                        type:'POST',
+                        dataType:'text',
+                        async:false,
+                        beforeSend:function(){$("#phoneTip"+b).removeClass().html("<img src='images/validator/onLoad.gif'/>正在检查联系电话是否存在，请稍候...");},
+                        success:function(res){
+                            if(res=='1'){
+                                $("#phoneTip"+b).removeClass().addClass('onCorrect').html("<img src='images/index-new/right.png' alt='right'/>");
+                                result=true;
+                            }else{
+                                $("#phoneTip"+b).removeClass().addClass('onError').html("<img src='images/index-new/error.png' alt='error'/>该联系手机已存在，请重新输入");
+                            }
+                        }
+                    })
+                }
+            }else{
+                $("#phoneTip"+b).removeClass().addClass('onError').html("<img src='images/index-new/error.png' alt='error'/>电话号码只能输入数字");
+            }
+
+        }
+    return result;
+}
+function checkAllPhone(){
+    result=true;
+    for(var i=1;i<4;i++){
+        res=checkphone(i);
+        if(res==false){
+            result=false;
+            break;
+        }
+    }
+    return result;
+}
+</script>
+
+
+</head>
+<body style="background: #f6f6f6;">
+<div class="con_middle" style="margin-top: 30px;">
+<div class="login">
+    <a href="/"><img width="120px" src="images/index-new/sfclogo.png" alt="荆棘鸟速递" /></a> 免费注册
+</div>
+<div class="login_mid">
+<div class="sign_up">
+<form id="form1"  method="post">
+<table>
+<tbody>
+<tr>
+    <td align="right" width="15%"><span style="color:#F00;">*</span>用户名：</td>
+    <td width="55%"><input style="width:500px; height:35px;" type="text" id="username" name="username" </td>
+    <td width="30%" class="login_midmr" id="usernameTip">(用户名长度为4-20)</td>
+</tr>
+<tr>
+    <td align="right"><span style="color:#F00;">*</span>密码：</td>
+    <td><input style="width:500px; height:35px;" type="password" id="password" name="password" </td>
+    <td class="login_midmr" id="passwordTip">(请输入密码)</td>
+</tr>
+<tr>
+    <td align="right"><span style="color:#F00;">*</span>确认密码：</td>
+    <td><input style="width:500px; height:35px;" type="password" id="password2" name="pass" </td>
+    <td class="login_midmr" id="password2Tip">(请输入重复密码)</td>
+</tr>
+<tr>
+    <td align="right"><span style="color:#F00;">*</span>手机：</td>
+    <td><select style="width:170px; height:35px; border:1px solid #ccc;" name="phone" id="country_id">
+            <option value="49">China(中国)</option>
+            <option value="253">United States Of America(美国)</option>
+            <option value="252">United Kingdom(英国)</option>
+            <option value="41">Canada(加拿大)</option>
+            <option value="89">Germany(德国)</option>
+            <option value="221">Spain(西班牙)</option>
+            <option value="82">France(法国)</option>
+            <option value="115">Italy(意大利)</option>
+            <option value="13">Australia(澳大利亚)</option>
+            <option value="118">Japan(日本)</option>
+            <option value="201">Russia(俄罗斯)</option>
+            <option value="33">Brazil(巴西)</option>
+            <option value="11">Armenia(亚美尼亚)</option>
+            <option value="1">Afghanistan(阿富汗)</option>
+            <option value="2">Albania(阿尔巴尼亚)</option>
+            <option value="3">Algeria(阿尔及利亚)</option>
+            <option value="4">American Samoa(萨摩亚群岛)</option>
+            <option value="5">Andorra(安道尔)</option>
+            <option value="6">Angola(安哥拉)</option>
+            <option value="7">Anguilla(安圭拉岛)</option>
+            <option value="8">Antigua And Barbuda(安提瓜和巴布达)</option>
+            <option value="10">Argentina(阿根廷)</option>
+            <option value="12">Aruba(阿鲁巴岛)</option>
+            <option value="450">ASCENSION(阿森松岛)</option>
+            <option value="14">Austria(奥地利)</option>
+            <option value="15">Azerbaijan(阿塞拜疆)</option>
+            <option value="16">Azores(亚述尔群岛)</option>
+            <option value="17">Bahamas(巴哈马)</option>
+            <option value="18">Bahrain(巴林)</option>
+            <option value="273">Balearics(巴利阿里群岛)</option>
+            <option value="19">Bangladesh(孟加拉)</option>
+            <option value="20">Barbadian(巴贝多)</option>
+            <option value="21">Barbados(巴巴多斯)</option>
+            <option value="39">Belarus(白俄罗斯)</option>
+            <option value="22">Belgium(比利时)</option>
+            <option value="23">Belize(伯利兹城)</option>
+            <option value="24">Benin(贝宁)</option>
+            <option value="25">Bermuda(百慕大)</option>
+            <option value="26">Bhutan(不丹)</option>
+            <option value="27">Bolivia(玻利维亚)</option>
+            <option value="28">Bonaire(博内尔岛)</option>
+            <option value="29">BOSNIA(波斯尼亚)</option>
+            <option value="30">Bosnia And Herzegovina(波黑)</option>
+            <option value="31">Botswana(博茨瓦纳)</option>
+            <option value="32">Bouvet Island(布维岛)</option>
+            <option value="34">British Virgin Islands(英属维尔京群岛)</option>
+            <option value="35">Brunei(文莱)</option>
+            <option value="36">Bulgaria(保加利亚)</option>
+            <option value="37">Burkina Faso(布基纳法索)</option>
+            <option value="38">Burundi(布隆迪)</option>
+            <option value="451">CABINDA(卡奔达)</option>
+            <option value="40">Cameroon(喀麦隆)</option>
+            <option value="42">Canary Islands(加纳利群岛)</option>
+            <option value="43">Cape Verde(佛得角)</option>
+            <option value="452">CAROLINE AND MARIANAS IS(加罗林群岛，马里亚纳群岛)</option>
+            <option value="44">Cayman Islands(开曼群岛)</option>
+            <option value="45">Central African Republic(中非共和国)</option>
+            <option value="46">Chad(乍得)</option>
+            <option value="47">Channel Is.(英属海峡群岛)</option>
+            <option value="48">Chile(智利)</option>
+            <option value="50">China Mainland(Major areas)(中国内地(主要地区))</option>
+            <option value="51">China Mainland(Other areas)(中国内地(其它地区))</option>
+            <option value="52">Christmas Island(圣诞岛)</option>
+            <option value="53">Christopher and Nevis(圣克里斯托弗和尼维斯)</option>
+            <option value="54">Cocos Islands(可可斯群岛)</option>
+            <option value="55">Colombia(哥伦比亚)</option>
+            <option value="56">Comoros(科摩罗)</option>
+            <option value="57">Congo(刚果)</option>
+            <option value="58">Congo Democratic(刚果民主共和国)</option>
+            <option value="59">Cook Islands(库克群岛)</option>
+            <option value="274">Corsica(科西嘉岛)</option>
+            <option value="60">Costa Rica(哥斯达黎加)</option>
+            <option value="453">COTE D'IVOIRE(科特迪瓦)</option>
+            <option value="61">Croatia(克罗地亚)</option>
+            <option value="62">Cuba(古巴)</option>
+            <option value="63">Curacao(库腊索（荷属安地列斯）)</option>
+            <option value="64">Cyprus(塞浦路斯)</option>
+            <option value="65">Czech Republic(捷克)</option>
+            <option value="66">Denmark(丹麦)</option>
+            <option value="67">Djibouti(吉布提)</option>
+            <option value="68">Dominica(多米尼加)</option>
+            <option value="271">Dominican Republic(多米尼加共和国)</option>
+            <option value="69">East Timor(东帝汶)</option>
+            <option value="70">Ecuador(厄瓜多尔)</option>
+            <option value="71">Egypt(埃及)</option>
+            <option value="72">El Salvador(萨尔瓦多)</option>
+            <option value="73">Equatorial Guinea(赤道几内亚)</option>
+            <option value="74">Eritrea(厄立特里亚)</option>
+            <option value="75">Estonia(爱沙尼亚)</option>
+            <option value="76">Ethiopia(埃塞俄比亚)</option>
+            <option value="77">Faeroe Islands(非罗岛)</option>
+            <option value="78">Falkland Islands(福克兰群岛)</option>
+            <option value="79">Faroe Islands(法罗群岛)</option>
+            <option value="80">Fiji(斐济)</option>
+            <option value="81">Finland(芬兰)</option>
+            <option value="83">French Guiana(法属圭亚那)</option>
+            <option value="84">French Polynesia(法属波利尼西亚)</option>
+            <option value="85">Gabon(加蓬)</option>
+            <option value="86">Gambia(冈比亚)</option>
+            <option value="87">Gaza and Khan Yunis(加沙及汗尤尼斯)</option>
+            <option value="88">Georgia(格鲁吉亚)</option>
+            <option value="90">Ghana(加纳)</option>
+            <option value="91">Gibraltar(直布罗陀)</option>
+            <option value="92">Greece(希腊)</option>
+            <option value="93">Greenland(格陵兰岛)</option>
+            <option value="94">Grenada(格林纳达)</option>
+            <option value="95">Guadeloupe(法属瓜德罗普岛)</option>
+            <option value="96">Guam(关岛)</option>
+            <option value="97">Guatemala(危地马拉)</option>
+            <option value="98">Guernsey(根西岛)</option>
+            <option value="99">Guinea(几内亚)</option>
+            <option value="100">Guinea-bissau(几内亚比绍共和国)</option>
+            <option value="101">Guyana(圭亚那)</option>
+            <option value="102">Haiti(海地)</option>
+            <option value="464">Hawaiian Islands(夏威夷群岛)</option>
+            <option value="103">Heard And Mcdonald Islands(赫德和麦克唐纳群岛)</option>
+            <option value="104">Heligoland(戈兰高地)</option>
+            <option value="105">Honduras(洪都拉斯)</option>
+            <option value="106">Hong Kong(香港)</option>
+            <option value="107">Hungary(匈牙利)</option>
+            <option value="108">Iceland(冰岛)</option>
+            <option value="454">IFNI(伊夫尼)</option>
+            <option value="109">India(印度)</option>
+            <option value="110">Indonesia(印度尼西亚)</option>
+            <option value="111">Iran(伊朗)</option>
+            <option value="112">Iraq(伊拉克)</option>
+            <option value="113">Ireland(爱尔兰)</option>
+            <option value="114">Israel(以色列)</option>
+            <option value="116">Ivory Coast(象牙海岸)</option>
+            <option value="117">Jamaica(牙买加)</option>
+            <option value="119">Jersey(泽西岛)</option>
+            <option value="455">JOHNSTON(约翰斯敦岛)</option>
+            <option value="120">Jordan(约旦)</option>
+            <option value="121">Kampuchea(柬埔寨)</option>
+            <option value="122">Kazakhstan(哈萨克斯坦)</option>
+            <option value="123">Kenya(肯尼亚)</option>
+            <option value="456">KINGMAN IS(金门岛)</option>
+            <option value="124">Kiribati(基里巴斯)</option>
+            <option value="125">Korea(韩国)</option>
+            <option value="126">KOSOVO(科索沃)</option>
+            <option value="127">Kosrae(摩斯雷)</option>
+            <option value="128">Kuwait(科威特)</option>
+            <option value="129">Kyrgyzstan(吉尔吉斯斯坦)</option>
+            <option value="130">Laos(老挝)</option>
+            <option value="131">Latvia(拉脱维亚)</option>
+            <option value="132">Lebanon(黎巴嫩)</option>
+            <option value="133">Lesotho(莱索托)</option>
+            <option value="134">Liberia(利比里亚)</option>
+            <option value="135">Libya(利比亚)</option>
+            <option value="136">Liechtenstein(列支敦士登)</option>
+            <option value="137">Lithuania(立陶宛)</option>
+            <option value="138">Luxembourg(卢森堡)</option>
+            <option value="139">Macau(澳门)</option>
+            <option value="140">Macedonia(马其顿)</option>
+            <option value="141">Madagascar(马达加斯加)</option>
+            <option value="142">Madeira(马德拉)</option>
+            <option value="143">Malawi(马拉维)</option>
+            <option value="144">Malaysia(马来西亚)</option>
+            <option value="145">Maldives(马尔代夫)</option>
+            <option value="146">Mali(马里)</option>
+            <option value="147">Malta(马耳他)</option>
+            <option value="148">Marshall Islands(马绍尔群岛)</option>
+            <option value="149">Martinique(马提尼克岛)</option>
+            <option value="269">Maryland(马里兰)</option>
+            <option value="150">Mauritania(毛利塔尼亚)</option>
+            <option value="151">Mauritius(毛里求斯)</option>
+            <option value="152">MAYOTTE(马约特岛)</option>
+            <option value="153">Melilla(梅利利亚)</option>
+            <option value="154">Mexico(墨西哥)</option>
+            <option value="155">Micronesia(密克罗尼西亚)</option>
+            <option value="457">MIDWAY IS.,WAKE IS(中途岛，威克岛)</option>
+            <option value="156">Miquelon(密克隆)</option>
+            <option value="157">Moldova(摩尔多瓦)</option>
+            <option value="158">Monaco(摩纳哥)</option>
+            <option value="159">Mongolia(蒙古)</option>
+            <option value="160">Montenegro(黑山共和国)</option>
+            <option value="161">Montserrat(蒙特塞拉特岛)</option>
+            <option value="162">Morocco(摩洛哥)</option>
+            <option value="163">Mozambique(莫桑比克)</option>
+            <option value="164">Myanmar(缅甸)</option>
+            <option value="165">Namibia(纳米比亚)</option>
+            <option value="166">Nauru(瑙鲁)</option>
+            <option value="167">Nepal(尼泊尔)</option>
+            <option value="168">Netherlands(荷兰)</option>
+            <option value="169">Netherlands Antilles(荷属安的列斯群岛)</option>
+            <option value="170">Neutral Zone(中立区（沙特－伊拉克间）)</option>
+            <option value="171">New Caledonia(新喀里多尼亚)</option>
+            <option value="172">New Zealand(新西兰)</option>
+            <option value="173">New Zealand Islands Territories(新西兰属土岛屿)</option>
+            <option value="174">Nicaragua(尼加拉瓜)</option>
+            <option value="175">Niger(尼日尔)</option>
+            <option value="176">Nigeria(尼日利亚)</option>
+            <option value="177">Niue(纽埃岛)</option>
+            <option value="178">Norfolk Island(诺福克岛)</option>
+            <option value="179">North Korea(朝鲜)</option>
+            <option value="180">Northern Ireland(北爱尔兰自治区)</option>
+            <option value="181">Northern Mariana Islands(北马里亚纳群岛)</option>
+            <option value="182">Norway(挪威)</option>
+            <option value="183">Oman(阿曼)</option>
+            <option value="184">Pakistan(巴基斯坦)</option>
+            <option value="185">Palau(帛琉群岛)</option>
+            <option value="186">Palestine(巴勒斯坦)</option>
+            <option value="187">Panama(巴拿马)</option>
+            <option value="188">Papua New Guinea(巴布亚新几内亚)</option>
+            <option value="189">Paraguay(巴拉圭)</option>
+            <option value="190">Peru(秘鲁)</option>
+            <option value="191">Philippines(菲律宾)</option>
+            <option value="458">PITCAIRN(皮特克恩岛)</option>
+            <option value="192">Poland(波兰)</option>
+            <option value="193">Polynesia(玻利尼西亚)</option>
+            <option value="194">Ponape(波纳佩岛)</option>
+            <option value="195">Portugal(葡萄牙)</option>
+            <option value="196">Puerto Rico(波多黎各)</option>
+            <option value="197">Qatar(卡塔尔)</option>
+            <option value="198">Reunion(留尼旺岛)</option>
+            <option value="199">Romania(罗马尼亚)</option>
+            <option value="200">Rota(Nothern Mariana Islands)(罗塔岛（北马里亚纳群岛）)</option>
+            <option value="202">Rwanda(卢旺达)</option>
+            <option value="203">Saba(Netherlands Antilles)(萨巴（荷属安地列斯）)</option>
+            <option value="204">Saint Lucia(圣卢西亚岛)</option>
+            <option value="205">Saipan(塞班岛)</option>
+            <option value="206">San Marino(圣马力诺)</option>
+            <option value="207">Sao Tome And Principe(圣多美和普林西比)</option>
+            <option value="208">Saudi Arabia(沙特阿拉伯)</option>
+            <option value="210">Senegal(塞内加尔)</option>
+            <option value="211">Serbia(塞尔维亚)</option>
+            <option value="212">Seychelles(塞舌尔)</option>
+            <option value="213">Sierra Leone(塞拉利昂)</option>
+            <option value="459">SIKKIM(锡金)</option>
+            <option value="214">Singapore(新加坡)</option>
+            <option value="215">Sint Maarten(圣马丁)</option>
+            <option value="216">Slovakia(斯洛伐克)</option>
+            <option value="217">Slovenia(斯洛文尼亚)</option>
+            <option value="218">Solomon Islands(所罗门群岛)</option>
+            <option value="219">Somalia(索马里)</option>
+            <option value="275">Somaliland(索马里兰)</option>
+            <option value="220">South Africa(南非)</option>
+            <option value="460">SOUTH GEORGIA AND SOUTH SANDWICH(南乔治亚岛和南桑德维奇岛)</option>
+            <option value="467">South Sudan(南苏丹共和国)</option>
+            <option value="222">Sri Lanka(斯里兰卡)</option>
+            <option value="223">ST KITTS And NEVIS(圣基茨和尼维斯)</option>
+            <option value="465">St Vincent & Grenadines(圣文森特和格林纳丁斯)</option>
+            <option value="270">St. Eustatius(圣尤斯特歇斯)</option>
+            <option value="224">St. Pierre and Miquelon(圣皮埃尔和密特隆岛)</option>
+            <option value="225">St. Vincent(圣文森特岛)</option>
+            <option value="276">St.Barthelemy(圣巴托洛缪岛)</option>
+            <option value="461">ST.HELENA ISLAND(圣赫勒拿岛)</option>
+            <option value="462">ST.LUCIA(圣卢西亚)</option>
+            <option value="226">Sudan(苏丹)</option>
+            <option value="227">Suriname(苏里南)</option>
+            <option value="228">Swaziland(斯威士兰)</option>
+            <option value="229">Sweden(瑞典)</option>
+            <option value="230">Switzerland(瑞士)</option>
+            <option value="231">Syria(叙利亚)</option>
+            <option value="232">Tahiti(塔希提岛)</option>
+            <option value="233">Taiwan(台湾)</option>
+            <option value="234">Tajikistan(塔吉克斯坦)</option>
+            <option value="235">Tanzania(坦桑尼亚)</option>
+            <option value="236">Thailand(泰国)</option>
+            <option value="237">Timor Leste(East Timor)(帝汶（莱斯特）)</option>
+            <option value="238">Tinian (Northern Marthern Islands)(天宁岛（北马里亚纳群岛）)</option>
+            <option value="239">Togo(多哥)</option>
+            <option value="240">Tonga(汤加)</option>
+            <option value="241">Tortola(托托拉岛)</option>
+            <option value="242">Trinidad And Tobago(特立尼达和多巴哥)</option>
+            <option value="463">TRISTAN DA CUNHA ISLANDS(特里斯坦达库尼亚群岛)</option>
+            <option value="243">Truk(特鲁克(密克罗尼亚西联邦))</option>
+            <option value="244">Tunisia(突尼斯)</option>
+            <option value="245">Turkey(土耳其)</option>
+            <option value="246">Turkmenistan(土库曼斯坦)</option>
+            <option value="247">Turks And Caicos Islands(特克斯和凯科斯群岛)</option>
+            <option value="248">Tuvalu(图瓦卢)</option>
+            <option value="249">Uganda(乌干达)</option>
+            <option value="250">Ukraine(乌克兰)</option>
+            <option value="251">United Arab Emirates(阿拉伯联合酋长国)</option>
+            <option value="254">Uruguay(乌拉圭)</option>
+            <option value="255">US Virgin Islands(美属维尔京群岛)</option>
+            <option value="256">Uzbekistan(乌兹别克斯坦)</option>
+            <option value="257">Vanuatu(瓦努阿图)</option>
+            <option value="258">Vatican City(梵蒂冈)</option>
+            <option value="259">Venezuela(委内瑞拉)</option>
+            <option value="260">Vietnam(越南)</option>
+            <option value="466">Virgin Gorda(维尔京戈达岛)</option>
+            <option value="261">Wales(威尔士)</option>
+            <option value="262">Wallis & Futuna Is(瓦利斯群岛和富图纳群岛)</option>
+            <option value="263">Western Samoa(西萨摩亚)</option>
+            <option value="264">Yap(雅浦（密克罗尼亚西联邦）)</option>
+            <option value="265">Yemen(也门)</option>
+            <option value="267">Zambia(赞比亚)</option>
+            <option value="268">Zimbabwe(津巴布韦)</option>
+        </select>+<input style="width:318px; height:35px;" type="text" name="mobile" id="mobile" style="width:124px;"  onblur="mobileValidateCheck.checkmobile()" onclick="javascript:$('#mobileTip').removeClass().addClass('onFocus')"/></td>
+    <td class="login_midmr"><span style="padding-left: 10px" id="mobileTip">(请输入手机号码)</span></td>
+    <script>
+        $(function(){
+            $("#country_id").change(function(){
+                mobile=$("#mobile").val();
+                if(mobile){
+                    mobileValidate();
+                }else{
+                    $("#mobileTip").removeClass().addClass('onFocus').html('请输入您的手机');
+                }
+            });
+        })
+    </script>
+</tr>
+
+<tr class="span1">
+    <td align="right">电话：</td>
+    <td><input class="phone1" name="phoneare" placeholder="区号" style="width:243px; height:35px;" type="text" +
+        <input name="tellphone" class="fenji1" style="width:243px; height:35px;" type="text" placeholder="座机" </td>
+    <td class="login_midmr"><img class="plus" src="images/index-new/sign_add.jpg" tip="1" alt="增加" /><span style="padding-left: 10px" id="phoneTip1">(请输入座机号码)</span></td>
+</tr>
+<script>
+    $(function(){
+        $(".areacode").focus(function(){
+            if($(this).val()=='区号'){
+                $(this).val('');
+            }
+            $(this).css('color','#000');
+        });
+        $(".telephone").focus(function(){
+            if($(this).val()=='座机'){
+                $(this).val('');
+            }
+            $(this).css('color','#000');
+        });
+    })
+</script>
+<!--<tr class="span2" style="display:none;">
+    <td align="right"></td>
+    <td><input class="phone2" name="phone2" placeholder="区号" style="width:243px; height:35px;" type="text" onclick="addphone('2')"onblur="checkphone('2')" />+
+        <input name="fenji2" class="fenji2" style="width:243px; height:35px;" type="text" placeholder="座机" onclick="addphone('2')"onblur="checkphone('2')"/></td>
+    <td class="login_midmr"><img class="minus" src="images/index-new/sign_cut.jpg" tip="2" alt="减少" /><span style="padding-left: 10px" id="phoneTip2">(请输入座机号码)</span></td>
+</tr>
+
+<tr class="span3" style="display:none;">
+    <td align="right"></td>
+    <td><input class="phone3" name="phone3" placeholder="区号" style="width:243px; height:35px;" type="text" onclick="addphone('3')"onblur="checkphone('3')" />+
+        <input name="fenji3" class="fenji3" style="width:243px; height:35px;" type="text" placeholder="座机" onclick="addphone('3')"onblur="checkphone('3')"/></td>
+    <td class="login_midmr"><img class="minus" src="images/index-new/sign_cut.jpg" tip="3" alt="减少" /><span style="padding-left: 10px" id="phoneTip3">(请输入座机号码)</span></td>
+</tr>-->
+<script>
+    var i=1;
+    $(function(){
+        $('.fenji1').focus(function(){
+            ext=$(this).val();
+            if(ext=='ext.'){
+                $(this).val('');
+            }
+        });
+        $(".plus").click(function(){
+            i++;
+            if(i<=3){
+                $(".span"+i).css('display','table-row');
+            }else{
+                for(var j=1;j<4;j++){
+                    dis=$(".span"+j).css('display');
+                    if(dis=='none'){
+                        dis=$(".span"+j).css('display','table-row');
+                        break;
+                    }
+                }
+            }
+        });
+        $(".minus").click(function(){
+            tip=$(this).attr('tip');
+            $('.span'+tip).css('display','none').find('input').val('');
+            $('.span'+tip).find('span:last').removeClass().addClass('onShow').html('请输入您的电话');
+        });
+    });
+</script>
+
+
+
+
+<tr>
+    <td align="right"><span style="color:#F00;">*</span>Email：</td>
+    <td><input style="width:500px; height:35px;" type="text" name="emil" id="email"  </td>
+    <td class="login_midmr" id="emailTip">(请输入您的电子邮箱地址)</td>
+</tr>
+<!--<tr>
+    <td align="right"></td>
+    <td><a herf="javascript:void(0)" id="getMailCodeBtn"><strong style="color:#fff; background:#ff6600;border-radius:5px;border:none; padding:3px 10px;" id="getMailStg">立即获取邮箱验证码</strong></a></td>
+    <td class="login_midmr" id="getMailStgTip"></td>
+</tr>-->
+<!--<tr>
+    <td align="right"><span style="color:#F00;">*</span>邮箱验证码：</td>
+    <td><input style="width:500px; height:35px;" type="text" name="mailVerifyCode" onclick="javascript:$('#mailVerifyCodeTip').removeClass().addClass('onFocus')" onblur="mailValidateCheck.verifyCodeValidate()"/></td>
+    <td class="login_midmr" id="mailVerifyCodeTip">(请输入邮箱验证码)</td>
+</tr>-->
+<tr>
+    <td align="right"><span style="color:#F00;">*</span>所在地区：</td>
+    <td><select style="width:160px; height:35px; border:1px solid #ccc;" name="province" id="province">
+        <option value="">请选择</option>
+            <option value="25" >上海 </option>
+            <option value="3" >安徽 </option>
+            <option value="2" >北京 </option>
+            <option value="32" >重庆 </option>
+            <option value="4" >福建 </option>
+            <option value="183" >港澳台地区 </option>
+            <option value="5" >甘肃 </option>
+            <option value="6" >广东 </option>
+            <option value="7" >广西 </option>
+            <option value="8" >贵州 </option>
+            <option value="9" >海南 </option>
+            <option value="10" >河北 </option>
+            <option value="12" >黑龙江 </option>
+            <option value="11" >河南 </option>
+            <option value="33" >香港 </option>
+            <option value="13" >湖北 </option>
+            <option value="14" >湖南 </option>
+            <option value="19" >内蒙古 </option>
+            <option value="16" >江苏 </option>
+            <option value="17" >江西 </option>
+            <option value="15" >吉林 </option>
+            <option value="18" >辽宁 </option>
+            <option value="34" >澳门 </option>
+            <option value="261" >宁夏 </option>
+            <option value="260" >青海 </option>
+            <option value="24" >陕西 </option>
+            <option value="22" >山东 </option>
+            <option value="23" >山西 </option>
+            <option value="26" >四川 </option>
+            <option value="35" >台湾 </option>
+            <option value="27" >天津 </option>
+            <option value="29" >新疆 </option>
+            <option value="259" >西藏 </option>
+            <option value="30" >云南 </option>
+            <option value="31" >浙江 </option>
+            <option value="610" >海外 </option>
+        </select>
+        <select style="width:160px; height:35px; border:1px solid #ccc; margin-left:5px;display:none;" id="city"></select>
+        <select style="width:160px; height:35px; border:1px solid #ccc;margin-left:5px;display:none;" id="town"></select>
+    </td>
+
+    <input type="hidden" name="region_id" value="" id="region_id"/>
+    <input type="hidden" name="last_region_id" value="" id="last_region_id"/>
+    <script>
+        $(function(){
+            $('#province').blur(function(){
+                if($(this).find('option:selected').val()==''){
+                    $("#provinceTip").removeClass().addClass('onError').html('请选择您所在地区');
+                    $("#saleexsit").attr("checked","true");
+                    $("#salenames").val('');
+                    $('#salemen01').show();
+                }
+            })
+            $('#province').change(function(){
+                $("#town").css('display','none');
+                $("#region_id").val('');
+                $("#last_region_id").val('');
+                $("#saleexsit").attr("checked","true");
+                $("#salenames").val('');
+                $('#salemen01').show();
+                province=$(this).find('option:selected').val();
+                if(province){
+                    $.post('#',{'parent_id':province},
+                            function(json){
+                                if(typeof(json) != 'undefined' && json!= ''){
+                                    html="<option value=''>请选择</option>";
+                                    $.each(json,function(k,v){
+                                        html+="<option value='"+v.region_id+"'>"+v.cn_name+"</option>";
+                                    });
+                                    $("#city").empty().html(html).css('display','inline');
+                                    $("#provinceTip").removeClass().addClass('onFocus').html('请选择您所在地区');
+                                }else{
+                                    $("#city").css('display','none');
+                                    $("#region_id").val(province);
+                                    $("#last_region_id").val(province);
+                                    last_region_id=$("#last_region_id").val();
+                                    $.post('#',{'last_region_id':last_region_id},
+                                            function(json){
+                                                if(!(typeof(json) !='undefined' && json!='')){
+                                                    $("#salenames").val('');
+                                                    $('#salemen01').hide();}
+                                            },'json');
+                                    $("#provinceTip").removeClass().addClass('onCorrect').html("<img src='images/index-new/right.png' alt='right'/>"); //输入正确
+                                }
+                            },'json');
+                }
+
+            });
+            $("#city").change(function(){
+                city=$(this).find('option:selected').val();
+                $("#region_id").val('');
+                $("#last_region_id").val('');
+                $("#saleexsit").attr("checked","true");
+                $("#salenames").val('');
+                if(city){
+                    $.post('#',{'parent_id':city},
+                            function(json){
+                                if(typeof(json) !='undefined' && json!=''){
+                                    html="<option value=''>请选择</option>";
+                                    $.each(json,function(k,v){
+                                        html+="<option value='"+v.region_id+"'>"+v.cn_name+"</option>";
+                                    });
+                                    $("#town").empty().html(html).css('display','inline');
+                                    $("#provinceTip").removeClass().addClass('onFocus').html('请选择您所在地区');
+                                    $("#region_id").val(city);
+                                }else{
+                                    $("#town").css('display','none');
+                                    $("#last_region_id").val(city);
+                                    last_region_id=$("#last_region_id").val();
+                                    $.post('#':last_region_id},
+                                            function(json){
+                                                if(!(typeof(json) !='undefined' && json!='')){
+                                                    $("#salenames").val('');
+                                                    $('#salemen01').hide();}
+                                                else{
+                                                    $('#salemen01').show();
+                                                }
+                                            },'json');
+                                    $("#provinceTip").removeClass().addClass('onCorrect').html("<img src='images/index-new/right.png' alt='right'/>"); //输入正确
+                                    $("#region_id").val(city);
+                                }
+
+                            },'json');
+                }
+            })
+            $("#town").change(function(){
+                town=$(this).find("option:selected").val();
+                $("#saleexsit").attr("checked","true");
+                $("#salenames").val('');
+                $("#last_region_id").val(town);
+                $("#provinceTip").removeClass().addClass('onCorrect').html("<img src='images/index-new/right.png' alt='right'/>"); //输入正确
+                last_region_id=$("#last_region_id").val();
+                $.post('#':last_region_id},
+                        function(json){
+                            if(!(typeof(json) !='undefined' && json!='')){
+                                $("#salenames").val('');
+                                $('#salemen01').hide();}
+                            else{
+                                $('#salemen01').show();
+                            }
+                        },'json');
+            });
+        })
+    </script>
+    <td class="login_midmr" id="provinceTip">请选择您所在地区</td>
+</tr>
+
+<!--<tr>
+
+
+    <td align="right">客户经理：</td>
+    <td><input type="radio" id="saleexsit" onclick="changesale(this)" value="1"  name="saleexsit" checked />随机分配&nbsp;&nbsp;
+        <input onclick="changesale(this)" type="radio" value="2" id="saleexsit1"  name="saleexsit" />指定分配
+
+        <select  id="salenames" name='salenames'>
+
+        </select>
+        <input type="hidden" name="salename_id" value="" id="salename_id"/></td>
+
+</tr>-->
+
+<script>
+    function changesale(obj){
+        var str1 = $(obj).val();
+        if(str1==1){
+            $("#salenames").css('display','none');
+        }
+        if(str1==2){
+            //$("#salenames").css('display','inline');
+            last_region_id=$("#last_region_id").val();
+            $.post('#':last_region_id},
+                    function(json){
+                        if(typeof(json) !='undefined' && json!=''){
+                            html="<option value=''>请选择</option>";
+                            $.each(json,function(k,v){
+                                html+="<option value='"+v.login_id+"'>"+v.first_name+"</option>";
+                            });
+                            $("#salenames").empty().html(html).css('display','inline');
+                            $("#salenames").val('')}
+                    },'json');
+        }
+    }
+    $(function(){
+        $("#salenames").change(function(){
+            sale_name=$(this).find("option:selected").val();
+            $("#salenames").val(sale_name);
+        });
+    })
+</script>
+
+<tr>
+    <td align="right">详细地址：</td>
+    <td><input style="width:500px; height:35px;" type="text" name="address" id="address"  /></td>
+    <td class="login_midmr" id="addressTip">请输入您的详细地址</td>
+</tr>
+<!--<tr>
+    <td align="right">推广员码：</td>
+    <td><input style="width:500px; height:35px;" type="text" id="identificationCode" name="identificationCode" value="" /></td>
+    <td class="login_midmr"></td>
+</tr>-->
+
+<script>
+    $(function(){
+        $('#address').click(function(){
+            $('#addressTip').removeClass().addClass('onFocus').html('请输入您的地址');
+        })
+        $('#address').blur(function(){
+            val=$(this).val();
+            if(val==''){
+                $('#addressTip').removeClass().addClass('onCorrect').html("<img src='images/index-new/right.png' alt='error'/>输入为空");
+            }else{
+                $('#addressTip').removeClass().addClass('onCorrect').html("<img src='images/index-new/right.png' alt='right'/>"); //输入正确
+            }
+        })
+    })
+</script>
+
+<tr>
+    <td colspan="2" style="padding-left:150px; padding-top:30px;">是否有意向使用荆棘鸟仓储物流服务？<span style="padding:0 10px;"><input type="radio" id="is_warehouseing1" name="is_warehouseing" value="1" onclick="changeText(this)" />是</span>
+        <span><input checked type="radio" value="0" id="is_warehouseing2" name="is_warehouseing" onclick="changeText(this)"/>否</span></td>
+</tr>
+<tr>
+    <td></td>
+    <td align="center" style="padding-top:30px;" id="done1">
+        <input type="checkbox" id="serv_item" name="serv_item" value="同意荆棘鸟速递物流条款内容"  />
+        <label for="serv_item">
+            <a>同意荆棘鸟速递物流条款内容</a>
+        </label>
+    </td>
+    <td></td>
+</tr>
+<tr  >
+    <td colspan="3" >
+        <li id="termsc" style="width: 760px;height:150px;margin:5px;border:1px solid #ccc; color:#393939; overflow-y:scroll;">
+        <div>生效日期：2014.10.23</div>
+<div>（服务条款如有更新，会以系统推送给寄件方进行确认，所有条款以最新生效内容为准。）</div>
+<div>本服务条款自寄件方签署之日订立，所有货件的运输都将适用于本条款中关于责任限制的规定。</div>
+<div>本服务条款的服务提供商指服务提供商（包括分公司）及合作方。</div>
+<div><span style="font-size: large"><strong>1.账号审核认证</strong></span></div>
+<div>寄件方在使用服务提供商服务前，必须在服务提供商官方网站进行注册， 并提供真实有效的、与账户使用人相符的认证资料和支付账号进行账户认证，完成认证后服务提供商物流平台方可供寄件方使用。服务提供商平台所有资料仅对注册方负责。</div>
+<div><span style="font-size: large"><strong>2.货件交寄</strong></span></div>
+<div><span style="font-size: larger"><strong>2.1 限寄和禁寄的货件</strong></span></div>
+<div>寄件方已明确了解服务提供商不接受寄件方委托承运为仿牌及《国家海关法》明确禁止的货件，并同意其交寄的货件都是符合运输条件的，如因寄件方违反相关条例，所产生的一切后果由寄件方负责。</div>
+<div>1) 禁寄物品：</div>
+<div>1. 海关知识产权保护的（如世界知名品牌，有&ldquo;ldquo;正式授权委托书&rdquo;的可以收寄），假冒伪劣的物品；</div>
+<div>2. 各种武器弹药、仿真武器（如仿真玩具枪）、有毒化学物品、化学危险品、爆炸物品（烟花爆竹、带气火机、汽油、酒精、硫酸、油漆等等）、火器、白色晶体状、粉状、液态状、膏状物品等；</div>
+<div>3. 现金、支票、汇票、证券、不记名可议付票据、伪造货币、借记卡、信用卡等卡类以及金融机关的存折等；</div>
+<div>4. 毒品（如鸦片、吗啡、海洛因、大麻、冰毒等）、药品以及麻醉品、精神药物等；</div>
+<div>5. 各种淫秽的书刊、报纸、画片、影片、录像带、录音带、淫秽玩具、娱乐用品以及印刷、雕刻有淫秽文字和图案的生活用品等等；</div>
+<div>6. 动植物、动物尸体（如标本）、人体、及其它有害生物；</div>
+<div>7. 烟草、酒、糖、红木、种子（其它繁殖材料）、化妆品、食品等；</div>
+<div>8. 医疗废物、化学废物、工业废物以及烈性毒药（如铊、氰化物等）；</div>
+<div>9. 珍贵文物古董、音像制品（光盘、磁带、录像带等），黄金白银铂等贵金属制品、宝石、珠宝、珍珠、象牙、兽皮、毛皮（皮草），私章或公章等；</div>
+<div>10. 喷雾容器、石棉、丁烷打火机、超过标准的磁性物品、氧化物和有机过氧化物等；</div>
+<div>11. 进出口受包括经由国在内的进出口国的法令禁止或限制的物品；</div>
+<div>12. 航空、运输公司的运输协议中不允许承运的其它物品；</div>
+<div>13. 服务提供商认为不符合规定的其它物品。</div>
+<div>2) 限寄物品：</div>
+<div>1. 部分运输渠道限制电池产品运输（详情请参阅&ldquo;电池运输指南&rdquo;）；</div>
+<div>2. 部分运输渠道限制木箱包装货件运输（详情请参阅&ldquo;国际快递出口木箱包装货件要求&rdquo;）；</div>
+<div>3. 香港邮政小包平邮件限制金属产品运输；</div>
+<div>4. 中国DHL限制假发运输；</div>
+<div>5. 台湾DHL限制车载播放器运输；</div>
+<div>6. 中国联邦限制含有品牌标识的LED类物品、自身或包装上印有CE、UL、ROHS、RU、FCC等认证标识产品、线路板、书籍、汽车配件的运输。</div>
+<div><span style="font-size: larger"><strong>2.2 货件资料交接</strong></span></div>
+<div>寄件方在将货件交给服务提供商前，需完成以下内容：</div>
+<div><strong>2.2.1 系统资料上传</strong></div>
+<div>1）必须将委托服务提供商承运货件的品名、规格、数量、申报价格、保险服务如实登记上传至物流平台，并通过物流平台打印标签和送货清单；</div>
+<div>2）寄件方需保证所填写信息的真实性和完整性；</div>
+<div>3）服务提供商没有义务审查运单和其它文件的填写人员的资格和是否得到寄件方授权，也没有义务审查所填写内容与货件是否相符。寄件方需对所填写的内容承担责任；</div>
+<div>4）服务提供商将按照寄件方提供的信息配送货件；</div>
+<div>5）寄件方在出口货件前要自行对目的国海关清关所需资料进行了解并取得出口所需的各种许可证和其它政府批文。服务提供商不负责提供相关信息并不对资料不全导致的任何后果承担责任；</div>
+<div>6）如无特殊说明，寄件方上传的信息将作为海关清关资料，如寄件方提供虚假信息，导致运输延误、海关扣货、罚款等后果，寄件方需自行承担所有经济损失及法律责任，服务提供商不承担任何责任并保留向寄件方追究法律责任的权利。</div>
+<div><strong>2.2.2 送货清单</strong></div>
+<div>寄件方将货件提交给服务提供商指定收货人时，应同时按要求提供与当次货件相符的&ldquo;送货清单&rdquo;，确认无误后双方需在&ldquo;送货清单&rdquo;上签字，作为货件完成交接的凭证。</div>
+<div>
+<div><strong>2.2.3 国内快递交货单</strong></div>
+<div>寄件方通过国内快递寄送货物至服务提供商时，应同时登陆物流系统添加寄出货物的信息，未能遵守要求导致服务提供商无法识别寄件方信息的货物，服务提供商将提供1个月的保管期限，寄件方需在保管期限内主动联系服务提供商处理，逾期将视为放弃货物，货物将被销毁。</div>
+</div>
+<div><strong>2.2.4 货物处理</strong></div>
+<div>寄件方交给服务提供商的货件应是按照要求处理过的，特别是对于贵重、易碎、易损的货件，需在寄件之前自行包装完好，保证在正常情况下适合搬运。随货件需提供交接资料，必要时提供完整的清关资料。</div>
+<div><strong><span style="font-size: larger">2.3 货件查验</span></strong></div>
+<div>服务提供商有权在未事先通知寄件方的情况下对货件进行抽样开封查验，如查侵权物品，将按如下办法处理:</div>
+<div>按100元/票货件的标准收取查验费;</div>
+<div>对寄件方货件增加查验比重，因查验造成的延误或其他问题，服务提供商不承担责任。</div>
+<div>费用及结算方式</div>
+<div><strong><span style="font-size: larger">3.1 费用</span></strong></div>
+<div>1）运费</div>
+<div>运输费用为寄件方在服务提供商官网注册的用户账户下所实际产生的运费总计。服务提供商有权利根据市场行情调整运输价格。价格调整将以邮件形式通知寄件方。</div>
+<div>2）保险费</div>
+<div>所有货件所涉及的赔偿按照寄件方选择货运方式相关赔偿条款进行，如寄件方需要更大程度的保护，可在服务提供商物流平台选择购买商业保险。</div>
+<div>* 国际平邮由于服务特殊性，不接受购买保险；</div>
+<div>* 国际挂号服务寄件方可选择是否购买保险，但申报价值（需按照零售价进行申报）超过25美元必须购买保险；</div>
+<div>* 专线及快递服务为了确保处理时效，必须购买保险；</div>
+<div>* 保险费由服务提供商代为收取，一旦出险服务提供商将代为向保险公司索赔，寄件方需按照要求提供索赔需要的资料，如因寄件方无法提供索赔资料造成无法赔偿，寄件方自行承担责任。</div>
+<div>3）退件费</div>
+<div>由于货件派送不成功或收件人拒收造成的退件，服务提供商将按照寄件方所选货运方式的收费标准收取退件费用，包括退件导致的已经产生的仓租费、清关费等。</div>
+<div>4）其他费用</div>
+<div>服务提供商的报价仅为运费和燃油附加费，不包括货件在目的地海关的清关费用、因清关延误产生的仓租费用，以及目的地国家征收的其它税费或罚款等费用。所有非服务提供商原因造成的此类费用，服务提供商将向寄件方收取，由于此类费用不一定能够在出货前被告知，最终费用金额以上级承运商账单为准。</div>
+<div><span style="font-size: large"><strong>3.2 结算</strong></span></div>
+<div>没有其他约定的情况下，服务提供商接受的结算周期与方式为预付款，即寄件方先向服务提供商预先支付费用的结算服务方式。</div>
+<div>服务提供商可向寄件方开具发票，发票抬头信息必须与寄件方注册信息主体一致，发票每月开具一次。且寄件方应向服务提供商提供相关材料备案，并支付6%增值税税点。</div>
+<div><span style="font-size: large"><strong>4.派送和无法派送</strong></span></div>
+<div><span style="font-size: larger"><strong>4.1 派送</strong></span></div>
+<div>1）服务提供商确保将寄件方的货件及时、准确、安全的交付上级承运商；</div>
+<div>2）寄件方需确保提供收件人信息的准确性和完整性，货件不能按照邮编或邮箱地址进行派送，仅能按照详细的收件人地址派送；</div>
+<div>3）在邮政投递中邮件的第一接收者应被视为收货人，但不一定直接送达收件人本人；</div>
+<div>4）如果收件人地址设有集中接收点，货件将被派送到该接收点。</div>
+<div><span style="font-size: larger"><strong>4.2 无法派送的原因</strong></span></div>
+<div>有以下情形之一的，可能导致货件无法派送：</div>
+<div>1）收件人拒绝接收货件或支付税费；</div>
+<div>2）该货件被中转国或目的国相关部门认为是不可接受的；</div>
+<div>3）海关认为寄件方清关资料与实际货件不符（货件发出的清关发票寄件方为服务提供商，如海关要求提供真实寄件方盖章的清关资料，寄件方需自行配合海关处理）；</div>
+<div>4）无法确定或找到收件人。</div>
+<div><strong><span style="font-size: larger">4.3 无法派送的通知办法</span></strong></div>
+<div>服务提供商确保将已经获知的货件运输过程中发生的异常情况及时反馈给寄件方，并积极协调处理。</div>
+<div>1） 针对单件货件产生的异常情况，服务提供商将以物流系统问题件的形式给予寄件方通知，寄件方应确保及时查看问题件并积极配合服务提供商进行处理； &nbsp; &nbsp; &nbsp; &nbsp;</div>
+<div>2） 针对普遍产生、涉及面较广或行业相关异常情况，服务提供商将以邮件和网站新闻形式发布，寄件方应确保提供的邮件地址有效，并定期查看邮件和服务提供商官方网站新闻内容，如有邮箱地址或联系方式变更，应及时通知服务提供商；</div>
+<div>3）如寄件方不能及时提供处理意见或目的国政府不能接受寄件方的处理意见，服务提供商可有权放弃该货件，且无需向寄件方或其他人承担任何责任。</div>
+<div><span style="font-size: large"><strong>5.货件改发或退回</strong></span></div>
+<div><strong><span style="font-size: larger">5.1 货件改发</span></strong></div>
+<div>1） 寄件方选择使用香港平邮发出的货件，当投寄地址属于香港平邮尾袋情况时，服务提供商有权利将寄件方的货件转为其他邮政小包平邮服务发出。运费保持初始开单金额不变。（香港邮政尾袋: 香港邮政规定交寄的货件必须按国家和地区进行分拣装袋，交寄的每袋货件重量不得低于6公斤，不得高于10公斤，否则不予收货。当天因为重量不足6公斤无法交寄的货件即为尾袋货件）</div>
+<div>2） 退至服务提供商英国处理中心的货件，寄件方可选择改发，除收取改发新地址运费外，寄件方还需承担50/票的改发处理费。</div>
+<div><strong><span style="font-size: larger">5.2 退回货件处理</span></strong></div>
+<div>寄件方委托服务提供商承运的货件出现&ldquo;4.1无法派送的原因&rdquo;之一的，如最终退回国内服务提供商营运中心：</div>
+<div>1） 服务提供商对货件退回的时间不做承诺，以服务提供商具体通知时间为准；</div>
+<div>2） 服务提供商对寄件方因任何原因滞留的退回货件，可提供7天免费保管服务，7天内服务提供商会物流系统退件方式征求寄件方处理意见，超过7天服务提供商将对退件做销毁处理；</div>
+<div>3）服务提供商将以合理的方式依寄件方要求处理货件，因此发生的额外费用由寄件方承担：</div>
+<div>寄件方可选择由服务提供商销毁退回货件，销毁费用为1元/公斤，如货件退回实际已产生的相关费用，寄件方需向服务提供商支付。</div>
+<div><span style="font-size: large"><strong>6.运输延误</strong></span></div>
+<div><span style="font-size: larger"><strong>6.1 不可抗因素</strong></span></div>
+<div>对于超出承运商控制范围的原因而导致的损失或损害，服务提供商不承担责任。这些原因包括但不限于：</div>
+<div>* 自然灾害，如地震、龙卷风、风暴、洪水、大雾等；</div>
+<div>* 战争、空难或禁运等不可抗力；</div>
+<div>* 货件固有的缺陷或特性(无论服务提供商是否知晓)；</div>
+<div>* 上级承运商对突发情况下的货件处理能力不足，如旺季爆仓；</div>
+<div>* 暴乱或民间骚乱；</div>
+<div>* 非服务提供商雇员或与服务提供商没有合同关系的人员的作为或不作为，如寄件方、收货人、第三人、海关或其他政府部门；</div>
+<div>* 劳资事件；</div>
+<div>* 对于电子音像图片、数据或纪录的电磁性损坏或删除。</div>
+<div><span style="font-size: larger"><strong>6.2 线路</strong></span></div>
+<div>寄件方需接受服务提供商及上级承运商安排的所有路线和绕航，包括可能的运输中转站，由此造成的运输时效，服务提供商将不做出任何承诺。</div>
+<div><span style="font-size: larger"><strong>6.3 参考时效</strong></span></div>
+<div>服务提供商网站公布的投递时间是从对应查询网站有操作记录开始至货件到达的时间，但不包括服务提供商取件的时间、在分拣中心分拣的时间和海关清关时间。服务提供商向寄件方提供的服务不是定时或限时服务，服务提供商官方网站公布的货运方式的运输时限，只作为参考使用，不作为货件延误赔偿依据。</div>
+<div><span style="font-size: large"><strong>7.查询</strong></span></div>
+<div><span style="font-size: larger"><strong>7.1 资料查询</strong></span></div>
+<div>服务提供商物流系统应对寄件方托运货件数量、金额等信息在系统保留一个月，寄件方如需保留数据，应利用服务提供商物流系统工具导出表格自行保存。</div>
+<div><span style="font-size: larger"><strong>7.2 货件查询</strong></span></div>
+<div>1）服务提供商官方网站归为国际平邮小包的货运方式，不在查询或理赔范围内；其他运输方式的查询服务，以服务提供商官网公布为准；</div>
+<div>2）服务提供商已交付给上一级物流承运商的货件发生损坏或丢失, 服务提供商将协助寄件方进行查询或索赔，并按上一级物流承运商的赔偿处理规则处理，已购买保险的货件按保险索赔规则处理；</div>
+<div>3）对上级承运商可提供查询的货运方式出现以下情况之一的，寄件方可向服务提供商提出查询申请：</div>
+<div>* 货件未按正常处理时效显示网上跟踪信息；</div>
+<div>* 货件在超出所选择运输方式参考时效未派送成功；</div>
+<div>* 货件在所选择货运方式对应查询网站上显示派送成功，收件人反应未收到货件；</div>
+<div>* 收件人反应货件损坏，减少，与发出货件不一致；</div>
+<div>* 产生不明费用；</div>
+<div>4） 寄件方要求查询或索赔的货件,应在该运输方式查询或索赔期内提出查询或索赔申请，超出期限的货件，服务提供商将不受理查询或索赔事宜，具体要求以服务提供商官方网站公布为准；</div>
+<div>5） 寄件方在发货时应确保货件信息详细准确，在查询时需提供查询货件的相关信息，如因货件发出时的信息与提交查询时信息不符，或寄件方提交的货件信息不符合查询条件造成的承运商拒绝查询，一切损失和责任由寄件方承担。由于国际运输货件查询存在的时间、空间和中转环节限制，不同国家和不同运输方式的查询期存在差异，服务提供商将尽最大的努力为寄件方查询货件，但不对上级承运商的延迟回复承担责任。</div>
+<div><span style="font-size: large"><strong>8.索赔</strong></span></div>
+<div><span style="font-size: larger"><strong>8.1 受理条件</strong></span></div>
+<div>任何索赔必须在服务提供商各货运方式查询期结束后提出。</div>
+<div>寄件方需提供货件丢失、受损或错误的相关证明，如收件人说明、照片等。</div>
+<div><span style="font-size: larger"><strong>8.2 赔偿办法</strong></span></div>
+<div><strong>8.2.1 服务提供商实际收货货件总数量与总重量与寄件方提供送货清单不符：</strong></div>
+<div>1） 货件数量不符：</div>
+<div>服务提供商核对寄件方交付的货件与送货清单后，如发现货件数量与送货清单注明数量有差异，将通过系统创建问题件，或者以邮件、电话的形式请寄件方确定后再将货件转运上级承运商。</div>
+<div>2） 货件重量差异：</div>
+<div>* 国际平邮、挂号重量差异</div>
+<div>当重量差异在100克以内服务提供商将不会通知寄件方，以服务提供商实际收货数据为准；如重量差异在100克以上，服务提供商会以电话通知请寄件方确定后再将货件转运上级承运商。（寄件方未将货件信息上传至物流系统的国际平邮货件以服务提供商实际收货重量为准，不予通知。）</div>
+<div>* 专线及快递业务重量差异</div>
+<div>重量差异在500克以内的服务提供商将不会通知寄件方，以服务提供商实际收货数据为准；如重量差异在500克以上，服务提供商会以电话通知请寄件方确定后再将货件转运上级承运商。</div>
+<div>数量、重量差异情况服务提供商仅承担反馈义务，对差异造成的损失不承担赔偿责任。</div>
+<div><strong>8.2.2 货件丢失：</strong></div>
+<div>1） 服务提供商内部丢失：</div>
+<div>寄件方将货件交给服务提供商工作人员确认签收时起，至服务提供商将货件交寄给上级承运商前，如果发生货件丢失，服务提供商将承担赔偿责任，责任金额根据寄件方在服务提供商系统中输入的申报价值（需按照零售价进行申报）或产品实际价值(即寄件方提供的购买凭证和发票等)，二者以较低者为准。单个货件最大赔偿金额不超过100美元。</div>
+<div>2） 上级承运商失误造成丢失：</div>
+<div>服务提供商将货件交给上级承运商后，上级承运商会提供相关的交接凭证，如果发生货件丢失，赔偿责任在于上级承运商。服务提供商将协助寄件方向上级承运商索赔，索赔额度根据各货运方式的赔偿规定执行。</div>
+<div>3）海关抽查造成的货件丢失：</div>
+<div>货件在经过海关清关时，因开包检查造成的货件丢失、货件内部分物品丢失或被海关扣押等损失，服务提供商不承担任何赔偿责任。</div>
+<div>4）假货、仿牌货、禁寄品、限寄品等货件处理条款：</div>
+<div>现金、易燃、易爆、易碎物品，涉及到侵犯版权、知识产权的物品，违法物品，以及航空公司和法律规定的禁运物品，寄件方已明确了解服务提供商将不予运输。对寄件方因违反上述禁止寄运规定所造成的一切损失，服务提供商将不承担任何赔偿责任，并保留向寄件方追究法律责任的权利。</div>
+<div><strong>8.2.3 货件错发：</strong></div>
+<div>寄件方的收件人在收到货件后，如发现有破损或调包时，寄件方应及时要求收件人提供拍照证明和货单号证明给服务提供商。</div>
+<div>1） 不属于服务提供商导致的调包，服务提供商将协助寄件方向上级承运商索赔。赔偿金额根据产品申报价值（需按照零售价进行申报）及服务提供商官方网站公布赔偿规则赔付；</div>
+<div>2） 因服务提供商操作原因导致货件发错地址，服务提供商在以下方式中选择成本最低的方式进行处理：</div>
+<div>* 将已收取的邮寄或快递费用退还给寄件方，并赔偿物品价值与申报价值（需按照零售价进行申报）较低者；</div>
+<div>* 承担货件从国外退回深圳的平邮邮费；</div>
+<div>* 寄错地址向正确地址转发货件的平邮邮费。</div>
+<div><span style="font-size: larger"><strong>8.3 其他损失</strong></span></div>
+<div>1）服务提供商对寄件方所承担的责任仅限于直接损失，且不超过各运输方式公布的限额；</div>
+<div>2）因寄件方可事先对特殊风险投保，服务提供商不承担任何其它损失或损害（包括但不限于利润、收入、利息及未来业务的损失），无论这些其它损失或损害是特殊的或是间接的，无论服务提供商是否在受理货件之前或之后知晓存在这些损失或损害的风险；</div>
+<div>3）服务提供商对寄件方委托承运货件物品品牌、质量产生的纠纷不承担任何责任。</div>
+<div><span style="font-size: large"><strong>9.保密信息</strong></span></div>
+<div>1）服务提供商承诺确保寄件方所提供的账户资料被妥善保管，除账户认证外不做他用；</div>
+<div>2）寄件方对于服务提供商所提供服务中属行业内敏感信息的内容需对第三方保密，此类信息包含双方约定费率、财务状况、技术信息等；</div>
+<div>3）寄件方需保证在服务提供商物流系统注册账号密码的安全，如因寄件方保管不善造成的账号被盗用、账号信息被篡改等一切经济及其他损失，服务提供商将不承担任何责任。</div>
+<div><span style="font-size: large"><strong>10. 法律适用和争议解决</strong></span></div>
+<div>如寄件人就条款内容或其执行发生任何争议，双方应尽量友好协商解决；协商不成时，任何一方均可向服务提供商所在地的人民法院提起诉讼。</div>
+<div><span style="font-size: large"><strong>11. 可分割性</strong></span></div>
+<div>本条款任何部分的无效或不可执行，不影响其他条款的效力和执行。</div>
+<p>&nbsp;</p>
+
+        </li>
+    </td>
+</tr>
+<tr >
+    <td colspan="3" >
+        <li id="termscff"  style="width: 760px;height:150px;margin:5px;border:1px solid #ccc; color:#393939; overflow:scroll; display: none">
+        <p class="MsoNormal" style="text-align: center">前海荆棘鸟国际物流与仓储服务用户协议</p>
+<div>（生效日期：2014年10月23日）</div>
+<div>（服务条款如有更新，会以系统推送给寄件方进行确认，所有条款以最新生效内容为准。）</div>
+<div>本服务条款自寄件方签署之日订立，所有货件的运输都将适用于本条款中关于责任限制的规定。</div>
+<div>本服务条款的服务提供商指服务提供商（包括分公司）及合作方。</div>
+<div><span style="font-size: larger">1.账号审核认证</span></div>
+<div>寄件方在使用服务提供商服务前，必须在服务提供商官方网站进行注册， 并提供真实有效的、与账户使用人相符的认证资料和支付账号进行账户认证，完成认证后服务提供商物流平台方可供寄件方使用。服务提供商平台所有资料仅对注册方负责。</div>
+<div><span style="font-size: larger">2.货件交寄</span></div>
+<div>2.1 限寄和禁寄的货件</div>
+<div>寄件方已明确了解服务提供商不接受寄件方委托承运为仿牌及《国家海关法》明确禁止的货件，并同意其交寄的货件都是符合运输条件的，如因寄件方违反相关条例，所产生的一切后果由寄件方负责。</div>
+<div>1) 禁寄物品：</div>
+<div>1. 海关知识产权保护的（如世界知名品牌，有&ldquo;正式授权委托书&rdquo;的可以收寄），假冒伪劣的物品；</div>
+<div>2. 各种武器弹药、仿真武器（如仿真玩具枪）、有毒化学物品、化学危险品、爆炸物品（烟花爆竹、带气火机、汽油、酒精、硫酸、油漆等等）、火器、白色晶体状、粉状、液态状、膏状物品等；</div>
+<div>3. 现金、支票、汇票、证券、不记名可议付票据、伪造货币、借记卡、信用卡等卡类以及金融机关的存折等；</div>
+<div>4. 毒品（如鸦片、吗啡、海洛因、大麻、冰毒等）、药品以及麻醉品、精神药物等；</div>
+<div>5. 各种淫秽的书刊、报纸、画片、影片、录像带、录音带、淫秽玩具、娱乐用品以及印刷、雕刻有淫秽文字和图案的生活用品等等；</div>
+<div>6. 动植物、动物尸体（如标本）、人体、及其它有害生物；</div>
+<div>7. 烟草、酒、糖、红木、种子（其它繁殖材料）、化妆品、食品等；</div>
+<div>8. 医疗废物、化学废物、工业废物以及烈性毒药（如铊、氰化物等）；</div>
+<div>9. 珍贵文物古董、音像制品（光盘、磁带、录像带等），黄金白银铂等贵金属制品、宝石、珠宝、珍珠、象牙、兽皮、毛皮（皮草），私章或公章等；</div>
+<div>10. 喷雾容器、石棉、丁烷打火机、超过标准的磁性物品、氧化物和有机过氧化物等；</div>
+<div>11. 进出口受包括经由国在内的进出口国的法令禁止或限制的物品；</div>
+<div>12. 航空、运输公司的运输协议中不允许承运的其它物品；</div>
+<div>13. 服务提供商认为不符合规定的其它物品。</div>
+<div>2) 限寄物品：</div>
+<div>1. 部分运输渠道限制电池产品运输（详情请参阅&ldquo;电池运输指南&rdquo;）；</div>
+<div>2. 部分运输渠道限制木箱包装货件运输（详情请参阅&ldquo;国际快递出口木箱包装货件要求&rdquo;）；</div>
+<div>3. 香港邮政小包平邮件限制金属产品运输；</div>
+<div>4. 中国DHL限制假发运输；</div>
+<div>5. 台湾DHL限制车载播放器运输；</div>
+<div>6. 中国联邦限制含有品牌标识的LED类物品、自身或包装上印有CE、UL、ROHS、RU、FCC等认证标识产品、线路板、书籍、汽车配件的运输。</div>
+<div>2.2 货件资料交接</div>
+<div>寄件方在将货件交给服务提供商前，需完成以下内容：</div>
+<div>2.2.1 系统资料上传</div>
+<div>1）必须将委托服务提供商承运货件的品名、规格、数量、申报价格、保险服务如实登记上传至物流平台，并通过物流平台打印标签和送货清单；</div>
+<div>2）寄件方需保证所填写信息的真实性和完整性；</div>
+<div>3）服务提供商没有义务审查运单和其它文件的填写人员的资格和是否得到寄件方授权，也没有义务审查所填写内容与货件是否相符。寄件方需对所填写的内容承担责任；</div>
+<div>4）服务提供商将按照寄件方提供的信息配送货件；</div>
+<div>5）寄件方在出口货件前要自行对目的国海关清关所需资料进行了解并取得出口所需的各种许可证和其它政府批文。服务提供商不负责提供相关信息并不对资料不全导致的任何后果承担责任；</div>
+<div>6）如无特殊说明，寄件方上传的信息将作为海关清关资料，如寄件方提供虚假信息，导致运输延误、海关扣货、罚款等后果，寄件方需自行承担所有经济损失及法律责任，服务提供商不承担任何责任并保留向寄件方追究法律责任的权利。</div>
+<div>2.2.2 送货清单</div>
+<div>寄件方将货件提交给服务提供商指定收货人时，应同时按要求提供与当次货件相符的&ldquo;送货清单&rdquo;，确认无误后双方需在&ldquo;送货清单&rdquo;上签字，作为货件完成交接的凭证。</div>
+<div>
+<div>2.2.3 国内快递交货单</div>
+</div>
+<div>
+<div>寄件方通过国内快递寄送货物至服务提供商时，应同时登陆物流系统添加寄出货物的信息，未能遵守要求导致服务提供商无法识别寄件方信息的货物，服务提供商将提供1个月的保管期限，寄件方需在保管期限内主动联系服务提供商处理，逾期将视为放弃货物，货物将被销毁。</div>
+</div>
+<div>2.2.4 货物处理</div>
+<div>寄件方交给服务提供商的货件应是按照要求处理过的，特别是对于贵重、易碎、易损的货件，需在寄件之前自行包装完好，保证在正常情况下适合搬运。随货件需提供交接资料，必要时提供完整的清关资料。</div>
+<div>2.3 货件查验</div>
+<div>服务提供商有权在未事先通知寄件方的情况下对货件进行抽样开封查验，如查侵权物品，将按如下办法处理:</div>
+<div>按100元/票货件的标准收取查验费;</div>
+<div>对寄件方货件增加查验比重，因查验造成的延误或其他问题，服务提供商不承担责任。</div>
+<div><span style="font-size: larger">3.费用及结算方式</span></div>
+<div>3.1 费用</div>
+<div>1）运费</div>
+<div>运输费用为寄件方在服务提供商官网注册的用户账户下所实际产生的运费总计。服务提供商有权利根据市场行情调整运输价格。价格调整将以邮件形式通知寄件方。</div>
+<div>2）保险费</div>
+<div>所有货件所涉及的赔偿按照寄件方选择货运方式相关赔偿条款进行，如寄件方需要更大程度的保护，可在服务提供商物流平台选择购买商业保险。</div>
+<div>* 国际平邮由于服务特殊性，不接受购买保险；</div>
+<div>* 国际挂号服务寄件方可选择是否购买保险，但申报价值<strong style="color:#ff6600;">（需按照零售价进行申报）</strong>超过25美元必须购买保险；</div>
+<div>* 专线及快递服务为了确保处理时效，必须购买保险；</div>
+<div>* 保险费由服务提供商代为收取，一旦出险服务提供商将代为向保险公司索赔，寄件方需按照要求提供索赔需要的资料，如因寄件方无法提供索赔资料造成无法赔偿，寄件方自行承担责任。</div>
+<div>3）退件费</div>
+<div>由于货件派送不成功或收件人拒收造成的退件，服务提供商将按照寄件方所选货运方式的收费标准收取退件费用，包括退件导致的已经产生的仓租费、清关费等。</div>
+<div>4）其他费用</div>
+<div>服务提供商的报价仅为运费和燃油附加费，不包括货件在目的地海关的清关费用、因清关延误产生的仓租费用，以及目的地国家征收的其它税费或罚款等费用。所有非服务提供商原因造成的此类费用，服务提供商将向寄件方收取，由于此类费用不一定能够在出货前被告知，最终费用金额以上级承运商账单为准。</div>
+<div>3.2 结算</div>
+<div>没有其他约定的情况下，服务提供商接受的结算周期与方式为预付款，即寄件方先向服务提供商预先支付费用的结算服务方式。</div>
+<div>服务提供商可向寄件方开具发票，发票抬头信息必须与寄件方注册信息主体一致，发票每月开具一次。且寄件方应向服务提供商提供相关材料备案，并支付6%增值税税点。</div>
+<div><span style="font-size: larger">4.派送和无法派送</span></div>
+<div>4.1 派送</div>
+<div>1）服务提供商确保将寄件方的货件及时、准确、安全的交付上级承运商；</div>
+<div>2）寄件方需确保提供收件人信息的准确性和完整性，货件不能按照邮编或邮箱地址进行派送，仅能按照详细的收件人地址派送；</div>
+<div>3）在邮政投递中邮件的第一接收者应被视为收货人，但不一定直接送达收件人本人；</div>
+<div>4）如果收件人地址设有集中接收点，货件将被派送到该接收点。</div>
+<div>4.2 无法派送的原因</div>
+<div>有以下情形之一的，可能导致货件无法派送：</div>
+<div>1）收件人拒绝接收货件或支付税费；</div>
+<div>2）该货件被中转国或目的国相关部门认为是不可接受的；</div>
+<div>3）海关认为寄件方清关资料与实际货件不符（货件发出的清关发票寄件方为服务提供商，如海关要求提供真实寄件方盖章的清关资料，寄件方需自行配合海关处理）；</div>
+<div>4）无法确定或找到收件人。</div>
+<div>4.3 无法派送的通知办法</div>
+<div>服务提供商确保将已经获知的货件运输过程中发生的异常情况及时反馈给寄件方，并积极协调处理。</div>
+<div>1） 针对单件货件产生的异常情况，服务提供商将以物流系统问题件的形式给予寄件方通知，寄件方应确保及时查看问题件并积极配合服务提供商进行处理； &nbsp; &nbsp; &nbsp; &nbsp;</div>
+<div>2） 针对普遍产生、涉及面较广或行业相关异常情况，服务提供商将以邮件和网站新闻形式发布，寄件方应确保提供的邮件地址有效，并定期查看邮件和服务提供商官方网站新闻内容，如有邮箱地址或联系方式变更，应及时通知服务提供商；</div>
+<div>3）如寄件方不能及时提供处理意见或目的国政府不能接受寄件方的处理意见，服务提供商可有权放弃该货件，且无需向寄件方或其他人承担任何责任。</div>
+<div><span style="font-size: larger">5.货件改发或退回</span></div>
+<div>5.1 货件改发</div>
+<div>1） 寄件方选择使用香港平邮发出的货件，当投寄地址属于香港平邮尾袋情况时，服务提供商有权利将寄件方的货件转为其他邮政小包平邮服务发出。运费保持初始开单金额不变。（香港邮政尾袋: 香港邮政规定交寄的货件必须按国家和地区进行分拣装袋，交寄的每袋货件重量不得低于6公斤，不得高于10公斤，否则不予收货。当天因为重量不足6公斤无法交寄的货件即为尾袋货件）</div>
+<div>2） 退至服务提供商英国处理中心的货件，寄件方可选择改发，除收取改发新地址运费外，寄件方还需承担50/票的改发处理费。</div>
+<div>5.2 退回货件处理</div>
+<div>寄件方委托服务提供商承运的货件出现&ldquo;4.1无法派送的原因&rdquo;之一的，如最终退回国内服务提供商营运中心：</div>
+<div>1） 服务提供商对货件退回的时间不做承诺，以服务提供商具体通知时间为准；</div>
+<div>2） 服务提供商对寄件方因任何原因滞留的退回货件，可提供7天免费保管服务，7天内服务提供商会物流系统退件方式征求寄件方处理意见，超过7天服务提供商将对退件做销毁处理；</div>
+<div>3）服务提供商将以合理的方式依寄件方要求处理货件，因此发生的额外费用由寄件方承担：</div>
+<div>寄件方可选择由服务提供商销毁退回货件，销毁费用为1元/公斤，如货件退回实际已产生的相关费用，寄件方需向服务提供商支付。</div>
+<div><span style="font-size: larger">6.运输延误</span></div>
+<div>6.1 不可抗因素</div>
+<div>对于超出承运商控制范围的原因而导致的损失或损害，服务提供商不承担责任。这些原因包括但不限于：</div>
+<div>* 自然灾害，如地震、龙卷风、风暴、洪水、大雾等；</div>
+<div>* 战争、空难或禁运等不可抗力；</div>
+<div>* 货件固有的缺陷或特性(无论服务提供商是否知晓)；</div>
+<div>* 上级承运商对突发情况下的货件处理能力不足，如旺季爆仓；</div>
+<div>* 暴乱或民间骚乱；</div>
+<div>* 非服务提供商雇员或与服务提供商没有合同关系的人员的作为或不作为，如寄件方、收货人、第三人、海关或其他政府部门；</div>
+<div>* 劳资事件；</div>
+<div>* 对于电子音像图片、数据或纪录的电磁性损坏或删除。</div>
+<div>6.2 线路</div>
+<div>寄件方需接受服务提供商及上级承运商安排的所有路线和绕航，包括可能的运输中转站，由此造成的运输时效，服务提供商将不做出任何承诺。</div>
+<div>6.3 参考时效</div>
+<div>服务提供商网站公布的投递时间是从对应查询网站有操作记录开始至货件到达的时间，但不包括服务提供商取件的时间、在分拣中心分拣的时间和海关清关时间。服务提供商向寄件方提供的服务不是定时或限时服务，服务提供商官方网站公布的货运方式的运输时限，只作为参考使用，不作为货件延误赔偿依据。</div>
+<div><span style="font-size: larger">7.查询</span></div>
+<div>7.1 资料查询</div>
+<div>服务提供商物流系统应对寄件方托运货件数量、金额等信息在系统保留一个月，寄件方如需保留数据，应利用服务提供商物流系统工具导出表格自行保存。</div>
+<div>7.2 货件查询</div>
+<div>1）服务提供商官方网站归为国际平邮小包的货运方式，不在查询或理赔范围内；其他运输方式的查询服务，以服务提供商官网公布为准；</div>
+<div>2）服务提供商已交付给上一级物流承运商的货件发生损坏或丢失, 服务提供商将协助寄件方进行查询或索赔，并按上一级物流承运商的赔偿处理规则处理，已购买保险的货件按保险索赔规则处理；</div>
+<div>3）对上级承运商可提供查询的货运方式出现以下情况之一的，寄件方可向服务提供商提出查询申请：</div>
+<div>* 货件未按正常处理时效显示网上跟踪信息；</div>
+<div>* 货件在超出所选择运输方式参考时效未派送成功；</div>
+<div>* 货件在所选择货运方式对应查询网站上显示派送成功，收件人反应未收到货件；</div>
+<div>* 收件人反应货件损坏，减少，与发出货件不一致；</div>
+<div>* 产生不明费用；</div>
+<div>4） 寄件方要求查询或索赔的货件,应在该运输方式查询或索赔期内提出查询或索赔申请，超出期限的货件，服务提供商将不受理查询或索赔事宜，具体要求以服务提供商官方网站公布为准；</div>
+<div>5） 寄件方在发货时应确保货件信息详细准确，在查询时需提供查询货件的相关信息，如因货件发出时的信息与提交查询时信息不符，或寄件方提交的货件信息不符合查询条件造成的承运商拒绝查询，一切损失和责任由寄件方承担。由于国际运输货件查询存在的时间、空间和中转环节限制，不同国家和不同运输方式的查询期存在差异，服务提供商将尽最大的努力为寄件方查询货件，但不对上级承运商的延迟回复承担责任。</div>
+<div><span style="font-size: larger">8.索赔</span></div>
+<div>8.1 受理条件</div>
+<div>任何索赔必须在服务提供商各货运方式查询期结束后提出。</div>
+<div>寄件方需提供货件丢失、受损或错误的相关证明，如收件人说明、照片等。</div>
+<div>&nbsp;8.2 赔偿办法</div>
+<div>8.2.1 服务提供商实际收货货件总数量与总重量与寄件方提供送货清单不符：</div>
+<div>1） 货件数量不符：</div>
+<div>服务提供商核对寄件方交付的货件与送货清单后，如发现货件数量与送货清单注明数量有差异，将通过系统创建问题件，或者以邮件、电话的形式请寄件方确定后再将货件转运上级承运商。</div>
+<div>2） 货件重量差异：</div>
+<div>* 国际平邮、挂号重量差异</div>
+<div>当重量差异在100克以内服务提供商将不会通知寄件方，以服务提供商实际收货数据为准；如重量差异在100克以上，服务提供商会以电话通知请寄件方确定后再将货件转运上级承运商。（寄件方未将货件信息上传至物流系统的国际平邮货件以服务提供商实际收货重量为准，不予通知。）</div>
+<div>* 专线及快递业务重量差异</div>
+<div>重量差异在500克以内的服务提供商将不会通知寄件方，以服务提供商实际收货数据为准；如重量差异在500克以上，服务提供商会以电话通知请寄件方确定后再将货件转运上级承运商。</div>
+<div>数量、重量差异情况服务提供商仅承担反馈义务，对差异造成的损失不承担赔偿责任。</div>
+<div>8.2.2 货件丢失：</div>
+<div>1） 服务提供商内部丢失：</div>
+<div>寄件方将货件交给服务提供商工作人员确认签收时起，至服务提供商将货件交寄给上级承运商前，如果发生货件丢失，服务提供商将承担赔偿责任，责任金额根据寄件方在服务提供商系统中输入的申报价值<strong style="color:#ff6600;">（需按照零售价进行申报）</strong>或产品实际价值(即寄件方提供的购买凭证和发票等)，二者以较低者为准。单个货件最大赔偿金额不超过100美元。</div>
+<div>2） 上级承运商失误造成丢失：</div>
+<div>服务提供商将货件交给上级承运商后，上级承运商会提供相关的交接凭证，如果发生货件丢失，赔偿责任在于上级承运商。服务提供商将协助寄件方向上级承运商索赔，索赔额度根据各货运方式的赔偿规定执行。</div>
+<div>3）海关抽查造成的货件丢失：</div>
+<div>货件在经过海关清关时，因开包检查造成的货件丢失、货件内部分物品丢失或被海关扣押等损失，服务提供商不承担任何赔偿责任。</div>
+<div>4）假货、仿牌货、禁寄品、限寄品等货件处理条款：</div>
+<div>现金、易燃、易爆、易碎物品，涉及到侵犯版权、知识产权的物品，违法物品，以及航空公司和法律规定的禁运物品，寄件方已明确了解服务提供商将不予运输。对寄件方因违反上述禁止寄运规定所造成的一切损失，服务提供商将不承担任何赔偿责任，并保留向寄件方追究法律责任的权利。</div>
+<div>8.2.3 货件错发：</div>
+<div>寄件方的收件人在收到货件后，如发现有破损或调包时，寄件方应及时要求收件人提供拍照证明和货单号证明给服务提供商。</div>
+<div>1） 不属于服务提供商导致的调包，服务提供商将协助寄件方向上级承运商索赔。赔偿金额根据产品申报价值<strong style="color:#ff6600;">（需按照零售价进行申报）</strong>及服务提供商官方网站公布赔偿规则赔付；</div>
+<div>2） 因服务提供商操作原因导致货件发错地址，服务提供商在以下方式中选择成本最低的方式进行处理：</div>
+<div>* 将已收取的邮寄或快递费用退还给寄件方，并赔偿物品价值与申报价值<strong style="color:#ff6600;">（需按照零售价进行申报）</strong>较低者；</div>
+<div>* 承担货件从国外退回深圳的平邮邮费；</div>
+<div>* 寄错地址向正确地址转发货件的平邮邮费。</div>
+<div>8.3 其他损失</div>
+<div>1）服务提供商对寄件方所承担的责任仅限于直接损失，且不超过各运输方式公布的限额；</div>
+<div>2）因寄件方可事先对特殊风险投保，服务提供商不承担任何其它损失或损害（包括但不限于利润、收入、利息及未来业务的损失），无论这些其它损失或损害是特殊的或是间接的，无论服务提供商是否在受理货件之前或之后知晓存在这些损失或损害的风险；</div>
+<div>3）服务提供商对寄件方委托承运货件物品品牌、质量产生的纠纷不承担任何责任。</div>
+<div><span style="font-size: larger">9.保密信息</span></div>
+<div>1）服务提供商承诺确保寄件方所提供的账户资料被妥善保管，除账户认证外不做他用；</div>
+<div>2）寄件方对于服务提供商所提供服务中属行业内敏感信息的内容需对第三方保密，此类信息包含双方约定费率、财务状况、技术信息等；</div>
+<div>3）寄件方需保证在服务提供商物流系统注册账号密码的安全，如因寄件方保管不善造成的账号被盗用、账号信息被篡改等一切经济及其他损失，服务提供商将不承担任何责任。</div>
+<div><span style="font-size: larger">10. 法律适用和争议解决</span></div>
+<div>如寄件人就条款内容或其执行发生任何争议，双方应尽量友好协商解决；协商不成时，任何一方均可向服务提供商所在地的人民法院提起诉讼。</div>
+<div><span style="font-size: larger">11. 可分割性</span></div>
+<div>本条款任何部分的无效或不可执行，不影响其他条款的效力和执行。</div>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: 微软雅黑; font-size: 9pt">&nbsp;</span></p>
+<p class="MsoNormal">----------------------------------------------------------------------------------------------------------</p>
+<p class="MsoNormal"><span lang="EN-US" style="font-family: 微软雅黑; font-size: 9pt">&nbsp;</span></p>
+<p class="ListParagraph" style="text-indent: -18pt; margin-left: 18pt; mso-list: l0 level1 lfo1">一、总则</p>
+<p class="MsoNormal">1.1寄件人使用前海荆棘鸟仓储服务前，应按前海荆棘鸟要求与提示完成全部的注册程序。前海荆棘鸟已按要求在寄件人官方网站注册账号，并且在进行注册程序过程中勾选&ldquo;我同意并接受协议中的各个条款&rdquo;，同时与寄件人签订本协议后。即表示前海荆棘鸟与寄件人达成协议，完全接受本协议项下的全部条款。</p>
+<p class="MsoNormal">1.2前海荆棘鸟注册成功后，应当对以其前海荆棘鸟帐号进行的所有活动和事件负法律责任。</p>
+<p class="MsoNormal">1.3前海荆棘鸟可以使用寄件人为您提供的仓储服务，当前海荆棘鸟使用寄件人该项服务时，前海荆棘鸟的使用行为视为其对该项服务的服务条款以及寄件人在该项服务中发出的各类公告的同意。</p>
+<p class="MsoNormal">1.4寄件人对本服务协议以及各个服务条款和公告可由寄件人公司随时更新的权力。</p>
+<p class="MsoNormal">您在使用寄件人提供的各项服务之前，应仔细阅读本服务协议。如您不同意本服务协议或随时对其的修改，您可以主动取消寄件人提供的服务；您一旦使用前海荆棘鸟服务，即视为您已了解并完全同意本服务协议各项内容，包括寄件人对服务协议随时所做的任何修改。</p>
+<p class="MsoNormal">二、注册信息和隐私保护</p>
+<p class="MsoNormal">2.1前海荆棘鸟帐号的所有权归寄件人，前海荆棘鸟完成注册申请手续后，获得帐号的使用权。前海荆棘鸟应提供及时、详尽及准确的个人资料，并不断更新注册资料，符合及时、 详尽准确的要求。所有原始键入的资料将引用为注册资料。如果因注册信息不真实而引起的问题，并对问题发生所带来的后果，寄件人不负任何责任。</p>
+<p class="MsoNormal">2.2前海荆棘鸟不应将其帐号、密码转让或出借予他人使用。如前海荆棘鸟发现其帐号遭他人非法使用，应立即通知寄件人。因黑客行为或前海荆棘鸟的保管疏忽而导致帐号、密码遭他人非法使用，寄件人不承担任何责任。</p>
+<p class="MsoNormal">2.3寄件人不对外公开或向第三方提供单个前海荆棘鸟的注册资料，除非：</p>
+<p class="MsoNormal">（1）事先获得前海荆棘鸟的明确授权；</p>
+<p class="MsoNormal">（2）只有透露你的个人资料，才能提供你所要求的产品和服务；</p>
+<p class="MsoNormal">（3）根据有关的法律法规要求；</p>
+<p class="MsoNormal">（4）按照相关政府主管部门的要求；</p>
+<p class="MsoNormal">（5）为维护寄件人的合法权益。</p>
+<p>&nbsp;2.4 寄件人必须按本协议约定向前海荆棘鸟支付仓储服务费用，并授权同意前海荆棘鸟在寄件人账号中扣除。</p>
+<p class="MsoNormal">三、仓储服务条款</p>
+<p class="MsoNormal">3.1前海荆棘鸟同意按照本协议的规定将其所有的或授权处置的货物交付给寄件人保管并履行本协议下的义务；寄件人同意按照本协议的规定向前海荆棘鸟提供仓储服务。</p>
+<p class="MsoNormal">在有效期内，前海荆棘鸟同意其要求存放于仓库的货物仅限于仓储货物。</p>
+<p class="MsoNormal">1）在有效期内，若前海荆棘鸟拟将货物存放于仓库内的，前海荆棘鸟应当考虑寄件人的工作时间以及要求寄件人从事（或安排从事）的工作提前给与寄件人书面通知；</p>
+<p class="MsoNormal">2）在有效期内，如前海荆棘鸟没有事先提前书面通知前海荆棘鸟就将货物托运至前海荆棘鸟仓库要求存储，前海荆棘鸟所需存储的产品必须按要求贴好标签，并将产品清单列表等有关单价提供给寄件人，以便查验。</p>
+<p class="MsoNormal">3.2如寄件人有合理原因，寄件人可以不接受前海荆棘鸟将货物存放于合同仓库内的要求（或以通知形式或以直接提供单据的形式提出要求），但寄件人应及时通知前海荆棘鸟其该等意图以避免货物到达接收地后无法及时接收。</p>
+<p class="MsoNormal">3.3如前海荆棘鸟拟提取或要求寄件人安排装运仓储货物的，前海荆棘鸟亦应考虑寄件人的工作时间以及要求寄件人从事（或安排从事）的工作提前给与寄件人书面通知以及所需的相关文件。在前海荆棘鸟提供了所需的全部文件并履行了本合同规定的和双方之间约定的其他义务后，寄件人应交付或安排装运相关仓储货物。</p>
+<p class="MsoNormal">3.4如本合同中规定的寄件人有权收取、获偿的款项（包括但不限于下述第<span lang="EN-US">3.1</span>款规定之仓储费用、补偿、赔偿）未全部支付予寄件人的，寄件人有权留置价值高于该等未付部分金额的仓储货物。</p>
+<p class="MsoNormal">3.5就仓储货物的保管的其他有关操作，寄件人仅在存储期间根据本合同和通用条件的规定向前海荆棘鸟承担责任和义务。</p>
+<p class="MsoNormal">3.6经前海荆棘鸟合理要求，寄件人应允许经前海荆棘鸟授权的人员进入合同仓库检查仓储货物，但经前海荆棘鸟授权的人员的该等检查不应妨碍寄件人对合同仓库的正常经营和管理且该等人员在合同仓库内应由寄件人人员陪同。</p>
+<p>&nbsp;</p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt">3.7经寄件人和前海荆棘鸟双方确定，寄件人使用前海荆棘鸟仓储服务，并向前海荆棘鸟支付仓储服务费用，具体收费标准如下：</p>
+<p class="MsoNormal" style="color: #ff6600; font-size: 14px">仓储费：150元/立方米/月</p>
+<p class="MsoNormal" style="color: #ff6600; font-size: 14px">产品管理费：15元/产品种类</p>
+<p class="MsoNormal" style="color: #ff6600; font-size: 14px">订单处理费：1.5元/产品</p>
+<p class="MsoNormal" style="color: #ff6600; font-size: 14px; font-weight: bold">说明：</p>
+<p class="MsoNormal">1）一个订单中多个相同产品，第一个收1.5元，其余每个产品按0.15元计算</p>
+<p class="MsoNormal">2）每个超过2公斤的订单，超出部分重量加收1元/公斤处理费</p>
+<p class="MsoNormal">3）订单处理费1.5元/产品，仅适用于使用前海荆棘鸟气泡袋打包的订单，如寄件人需使用非前海荆棘鸟气泡袋打包需另外支付订单处理附加费。具体费用以前海荆棘鸟公布为准。</p>
+<p class="MsoNormal">四、使用规则</p>
+<p class="MsoNormal">4.1任何同意使用寄件人仓储服务的前海荆棘鸟及使用人应当提供准确和真实的个人资料，如个人资料有任何变动，必须及时更新。如果因信息更改不及时，带来的一切不良后果，寄件人不负任何法律责任。</p>
+<p class="MsoNormal">4.2前海荆棘鸟注册成功后，其账号和密码由前海荆棘鸟自行负责保管；前海荆棘鸟应当对以其帐号进行的所有活动和事件负法律责任。</p>
+<p class="MsoNormal">4.3前海荆棘鸟在使用荆棘鸟网站服务过程中，必须遵守以下原则：</p>
+<p class="MsoNormal">1）遵守中国有关的法律和法规；</p>
+<p class="MsoNormal">2）不得为任何非法目的而使用网络服务系统；</p>
+<p class="MsoNormal">3）遵守所有与网络服务有关的网络协议、规定和程序；</p>
+<p class="MsoNormal">4）不得利用寄件人服务系统进行任何可能对互联网的正常运转造成不利影响的行为；</p>
+<p class="MsoNormal">5）不得利用寄件人服务系统传输任何骚扰性的、中伤他人的、辱骂性的、恐吓性的、庸俗淫秽</p>
+<p class="MsoNormal">或其他任何非法的信息资料；</p>
+<p class="MsoNormal">6）不得利用寄件人服务系统进行任何不利于寄件人或本公司的行为；</p>
+<p class="MsoNormal">7）如发现任何非法使用荆棘鸟速递帐号或帐号出现安全漏洞的情况，应立即通告网站管理员。</p>
+<p class="MsoNormal">五、免责声明</p>
+<p class="MsoNormal">5.1前海荆棘鸟同意其使用寄件人服务所存在的风险将完全由其自己承担；因其使用寄件人网络服务而产生的一切后果也由其自己承担，寄件人对前海荆棘鸟因使用寄件人服务产生的后果不承担任何责任。</p>
+<p class="MsoNormal">5.2寄件人提供的信息内容属资料性质，注册前海荆棘鸟在任何正式场合使用或引用寄件人提供的资料信息，应当与原文核对，寄件人对前海荆棘鸟因使用寄件人资料产生的后果不承担任何责任。</p>
+<p class="MsoNormal">5.3寄件人对未经寄件人同意传播寄件人信息资料产生的后果不承担任何责任。</p>
+<p class="MsoNormal">5.4寄件人不担保网络服务一定能满足注册前海荆棘鸟的要求，也不担保网络服务不会中断，对网络服务的及时性、安全性、准确性也都不作担保。</p>
+<p class="MsoNormal">5.5寄件人与中国人民财产保险公司签定了《财产险合同》，对注册前海荆棘鸟存储的货物保驾护航，但是对于如下情况，保险公司及寄件人不承担赔偿责任：</p>
+<p class="MsoNormal">5.5.1行政行为或司法行为；</p>
+<p class="MsoNormal">5.5.2战争、类似战争行为、敌对行动、军事行动、武装冲突、罢工、骚乱、暴动、政变、谋反、恐怖活动；</p>
+<p class="MsoNormal">5.5.3地震、海啸及其次生灾害；</p>
+<p class="MsoNormal">5.5.4核辐射、核裂变、核聚变、核污染及其他放射性污染；</p>
+<p class="MsoNormal">5.5.5大气污染、土地污染、水污染及其他非放射性污染，但因保险事故造成的非放射性污染不在此限；</p>
+<p class="MsoNormal">5.5.5存货货物的内在或潜在缺陷、自然磨损、自然损耗，大气（气候或气温）变化、正常水位变化或其他渐变原因，物质本身变化、霉烂、受潮、鼠咬、虫蛀、鸟啄、氧化、锈蚀、渗漏、烘焙；</p>
+<p class="MsoNormal">5.6关于存货保险免赔率的规定条款</p>
+<p class="MsoNormal">损耗率=耗损的产品数量/总入库数量</p>
+<p class="MsoNormal">当存货库存时间&lt;=90天,损耗率&lt;=0.05%时,寄件人不负责赔偿;</p>
+<p class="MsoNormal">90天&lt;库存时间&lt;=180天，损耗率&lt;=0.1%时，寄件人不负责赔偿；</p>
+<p class="MsoNormal">180天&lt;库存时间&lt;=360天,损耗率&lt;=0.5%时, 寄件人不负责赔偿;</p>
+<p class="MsoNormal">库存时间&gt;360天,保险失效,重新收取保费,且损耗率&lt;=1%时,寄件人不负责赔偿.</p>
+<p class="MsoNormal">六、服务变更、中断或终止</p>
+<p class="MsoNormal">6.1如因系统维护或升级的需要而需暂停网络服务，寄件人将尽可能事先进行通告。</p>
+<p class="MsoNormal">6.2如发生下列任何一种情形，寄件人有权随时中断或终止向注册前海荆棘鸟提供本协议项下的网络服务而无需通知：</p>
+<p class="MsoNormal">1）前海荆棘鸟提供的个人资料不真实；</p>
+<p class="MsoNormal">2）前海荆棘鸟会员违反本协议中规定的使用规则。</p>
+<p class="MsoNormal">除前款所述情形外，寄件人同时保留在不事先通知前海荆棘鸟的情况下随时中断或终止部分或全部网络服务的权利，对于所有服务的中断或终止而造成的任何损失，寄件人无需对前海荆棘鸟或任何第三方承担任何责任。</p>
+<p class="MsoNormal">6.3违约赔偿</p>
+<p class="MsoNormal">前海荆棘鸟同意保障和维护寄件人及其他前海荆棘鸟的利益，如因前海荆棘鸟违反有关法律、法规或本协议项下的任何条款而给寄件人或任何其他第三人造成损失，注册前海荆棘鸟同意承担由此造成的损害赔偿责任。</p>
+<p class="MsoNormal">6.4修改协议</p>
+<p class="MsoNormal">寄件人将可能会修改本协议的有关条款，一旦条款内容发生变动，寄件人将会在相关的页面提示修改内容。如果不同意寄件人对服务条款所做的修改，前海荆棘鸟有权停止使用寄件人网络服务。如果前海荆棘鸟继续使用寄件人网络服务，则视为前海荆棘鸟接受服务条款的变动。</p>
+<p class="MsoNormal">七、其他规定</p>
+<p class="MsoNormal">7.1本协议的订立、执行和解释及争议的解决均应适用中华人民共和国法律。</p>
+<p class="MsoNormal">7.2如双方就本协议内容或其执行发生任何争议，双方应尽量友好协商解决；协商不成时，任何一方均可向寄件人所在地的人民法院提起诉讼。</p>
+<p class="MsoNormal">7.3寄件人未行使或执行本服务协议任何权利或规定，不构成对前述权利或权利之放弃。</p>
+<p class="MsoNormal">7.4如本协议中的任何条款无论因何种原因完全或部分无效或不具有执行力，本协议的其余条款仍应有效并且有约束力。</p>
+<p class="MsoNormal">以上为仓储服务协议</p>
+        </li>
+    </td>
+</tr>
+<script>
+    function checkAll(){
+        $("#is_warehouseingTip").removeClass().addClass('onCorrect').html("<img src='images/index-new/right.png' alt='right'/>"); //输入正确
+        var name=checkusername();	//	alert(typeof(name));alert(typeof(checkusername()));
+        pass1=checkpassword();	//alert(typeof(pass1));
+        pass2=checkpassword2();	//alert(typeof(pass2));
+        mobile=mobileValidateCheck.checkmobile();	//alert(typeof(mobile));
+        email=mailValidateCheck.emailcheck();		//alert(typeof(email));
+        term=checkTerm();		//alert(typeof(term));
+        region=checkregion();	//alert(typeof(region));
+        phone=checkAllPhone();	//alert(typeof(phone));
+        if(name && pass1 && pass2 && mobile && email  && term && region && phone ){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    $(function(){
+        $('#form1').submit(function(){
+            $('#addressTip').removeClass().addClass('onCorrect');
+            $("#is_warehouseingTip").removeClass().addClass('onCorrect').html("<img src='images/index-new/right.png' alt='right'/>"); //输入正确
+            if($("#address").val()==''){
+                $('#addressTip').html("<img src='images/index-new/right.png' alt='right'/>输入内容为空");
+            }else{
+                $('#addressTip').html("<img src='images/index-new/right.png' alt='right'/>"); //输入正确
+            }
+            if(checkAll()){
+                return true;
+            }else{
+                return false;
+            }
+        });
+
+    })
+</script>
+
+<tr>
+    <td></td>
+    <td align="center" class="signup_radio"><input style="color:#fff; cursor:pointer;" id="submit"  type="submit" value="立即注册" /></td>
+    <td></td>
+</tr>
+<tr>
+    <td></td>
+    <td align="center" style="padding-top:30px;">已有账号，请<a style="color:#ff6600; text-decoration:underline;" href="oTTLoGin.html">登录</a></td>
+    <td></td>
+</tr>
+</tbody>
+</table>
+</form>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="footer" style="background:none; border:none;">
+    <p><a href="http://www.miitbeian.gov.cn/state/outPortal/loginPortal.action;jsessionid=ZcsY7-lkypdufSERWmuRiMA0Nn6cTUWbNtUqv2DJKC8M9duVrNjq!-839491397
+">Copyright© 2016, 版权所有 上海屹栗国际货运代理有限公司  &nbsp 沪ICP备15050822号-1</a>
+</p>
+</div>
+</div>
+</body>
+</html>
