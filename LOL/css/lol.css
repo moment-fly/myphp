@@ -1,0 +1,831 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.top{	
+	height: 80px;
+	background: #000;
+	margin: 0 auto;	
+	
+}
+.top span{
+	z-index: 10;
+	position: absolute;
+	left: 55px;
+	height: 130px;
+	width: 230px;
+	background: url(../img/LOL.png);
+	background-position: 0px -166px;
+}
+.top ul li{
+	list-style: none;
+	display: inline-block;
+	color: #fff;
+	text-align: center;
+	margin-left: 69px;
+}
+.top ul{
+	margin-left: 220px;
+	vertical-align: top;
+	display: inline-block;
+}
+.top a{
+	display: block;
+	text-decoration: none;
+    margin-top: 20px;
+    color: #e1e1e1;
+    font-size: 16px;
+    line-height: 0;
+}
+.top p{
+    font-size: 10px;
+    color: #575757;
+}
+.hove{
+	background-color: rgba(0,0,0,0.7);
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+	display: block;
+}
+.hove ul {
+	margin: 0;
+	padding: 0 0 0 433px;
+	list-style: none;
+	
+}
+.hove ul li {
+	width: 140px;
+	display: inline-block;
+	margin-top: 10px;
+	vertical-align: top;
+}
+.hove ul li a{
+	font-size: 14px;
+	margin: 10px;
+	text-align: center;
+	display: block;
+	color: #E1E1E1;
+	
+}
+.hove ul li a i{
+	font-style: normal;
+	color: #00AB88;
+}
+.mp4{
+	width: 1649px;
+   	overflow-x: hidden;
+   	margin-left: -300px;
+}
+.top1{
+	position: absolute;
+	left: 60px;
+	top: 160px;
+}
+.top1 h2{
+	height: 50px;
+    margin-bottom: 10px;
+    color: #00ab88;
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: bold;
+}
+.top1>p{
+	width: 500px;
+    height: 48px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: #e3e3e3;
+    line-height: 48px;
+}
+.top1 em{
+	display: block;
+	position: absolute;
+    left: 0;
+    top: 179px;
+    width: 220px;
+    height: 120px;
+    z-index: 1;
+    background: url(../img/bg-play.png);
+}
+.top1>a{
+	margin-top: 30px;
+	display: block;
+    width: 155px;
+    height: 36px;
+    border: 2px solid #05ad8d;
+    text-align: center;
+    line-height: 36px;
+    background: #000;
+    font-size: 14px;
+    color: #1bf6cc;
+}
+.top1>h6{
+	position: absolute;
+    right: -735px;
+	margin: 0;
+    font-size: 14px;
+    color: #888787;
+}
+.top1>h6 a{
+	font-size: 14px;
+	color: #1bf6cc;
+}
+.top1>h6 span{
+	display: inline-block;
+    padding: 0 15px;
+    height: 22px;
+    border: 2px solid #05ad8d;
+    text-align: center;
+    line-height: 22px;
+    background: #000;
+    font-size: 12px;
+    color: #1bf6cc;
+}
+.lihove:hover{
+	background: #404c72;
+}
+.top1 ul{
+	position: absolute;
+	top: 420px;
+	margin: 0;
+	padding: 0;
+	width: 1240px;
+	
+}
+.top1 ul li{
+	display: inline-block;
+	list-style: none;
+    width: 115px;
+    height: 115px;
+    text-align: center;
+  	margin: 0 0 0 -5px;
+    background: url(../img/LOL.png);
+    background-position: -220px 114px;
+    vertical-align: middle;
+}
+.top1 .top11{
+    width: 220px;
+    height: 115px;
+    background: url(../img/LOL.png);
+    background-position: 0 114px; 
+}
+.top1 ul li i{
+	display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    background: url(../img/LOL.png);
+    background-position: 0 0;
+}
+.top1 ul li p{
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 0;
+}
+.top1 ul li span{
+    color: #5e677f;
+    font-size: 12px;
+}
+.top1 .top12{
+	padding: 20px 0 20px 20px;
+	width: 427px;
+	height: 75px;
+	background: url(../img/LOL.png);
+	background-position: 460px 114px;
+	text-align: left;
+}
+.top1 .top12 i{
+	float: left;
+	width: 80px;
+	height: 80px;
+	background: url(../img/ttt.png);
+	background-position: center center; 
+}
+.top1 .top12 h5{
+    font-size: 16px;
+    color: #fff;
+    margin: 5px 0 0 100px;
+}
+.top1 .top12 p{
+	font-size: 12px;
+    color: #fff;
+    margin-left: 100px;
+}
+.box{
+	width: 1240px;
+	margin: 0 auto;
+}
+.left{
+	display: inline-block;
+	width: 780px;
+	margin-top: 30px;
+}
+.right{
+	display: inline-block;
+	margin-left: 55px;
+	width: 400px;
+}
+.bigl a{
+	margin: 0 -5px 0 0;
+	display: inline-block;
+    width: 156px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+    background: #efefef;
+}
+.out{
+	height: 330px;
+	width: 780px;
+	overflow: hidden;
+	position: relative;
+}
+.lun{
+	width: 10000px;
+	height: 330px;
+	position: absolute;
+	left: 0;
+}
+.tabf{
+	position: absolute;
+	background: #fff;
+}
+.le1{
+	height: 531px;
+	margin-top: 60px;
+}
+.le1 h5 i{
+	display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: -10px;
+    background: url(../img/LOL.png);
+	background-position: -40px -40px;
+}
+.le1 h5{
+	display: inline-block;
+	font-size: 25px;
+	line-height: 40px;
+    color: #555555;
+    margin: 0 395px 0 0;
+}
+.le1>a span{
+	display: inline-block;
+	vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    background: url(../img/LOL.png);
+    background-position: -567px -46px;
+}
+.le1 a{
+	display: inline-block;
+    height: 30px;
+    padding: 0 10px;
+    line-height: 30px;
+    margin-left: 10px;
+    background: #efefef;
+    border: 2px solid #efefef;
+    color: #777777;
+    font-size: 14px;
+    border-radius: 25px;
+}
+.le1>p{
+	display: inline-block;
+	border-bottom: 4px solid #666;
+    height: 36px;
+    width: 125px;
+    line-height: 36px;
+    color: #666666;
+    font-size: 16px;
+    text-align: center;
+}
+.le1 ul{
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	width: 780px;
+	background: #fff;
+	display: none;
+}
+.le1 .tab1{
+	display: block;
+}
+.le1 .tabp1{
+	border-color: #00ab88;
+}
+.le1 li{
+	display: inline-block;
+	width: 180px;
+    margin-right: 11px;
+    margin-bottom: 20px;
+}
+.le1 ul li p{
+	font-size: 14px;
+}
+.left h4{
+    background: #eaeaea;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+}
+.le2{
+	height: 416px;
+	margin-top: 60px;
+}
+.le2 h3 i{
+	display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: -10px;
+    background: url(../img/LOL.png);
+	background-position: -40px -40px;
+}
+.le2 h3{
+	display: inline-block;
+	font-size: 25px;
+	line-height: 40px;
+    color: #555555;
+    margin: 0 515px 0 0;
+}
+.le2>a{
+	display: inline-block;
+    height: 30px;
+    padding: 0 10px;
+    line-height: 30px;
+    margin-left: 10px;
+    background: #efefef;
+    border: 2px solid #efefef;
+    color: #777777;
+    font-size: 14px;
+    border-radius: 25px;
+}
+.bp>p{
+	display: inline-block;
+	border-bottom: 4px solid #ebecec;
+    height: 36px;
+    width: 125px;
+    line-height: 36px;
+    color: #666666;
+    font-size: 16px;
+    text-align: center;
+}
+.le21{
+	display: inline-block;
+	width: 180px;
+    margin-right: 20px;
+}
+.le21>span{
+	display: block;
+    margin-top: 10px;
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    text-align: center;
+    color: #0b4c3f;
+    background: url(../img/LOL.png);
+    background-position: 0 -346px;
+}
+.le22{
+	display: inline-block;
+	width: 560px;
+	font-size: 14px;
+}
+.le22>a{
+	display: block;
+    font-size: 26px;
+    color: #00A686;
+    font-weight: bold;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.le22 em{
+	margin-top: -30px;
+	float: right;
+	display: inline-block;
+    
+    font-size: 26px;
+    color: #00A686;
+    font-weight: bold;
+    line-height: 30px;
+    font-style: normal;
+}
+.le22 i{
+	font-style: normal;
+	margin-left: 295px;
+}
+.le22>p{
+	line-height: 0;
+}
+.le22 ul{
+	padding: 0;
+}
+.le22 li{
+	list-style: none;
+	height: 28px;
+    line-height: 28px;
+    margin: 0;
+}
+.le22 li span{
+	float: right;
+    color: #9BA0AD;
+}
+.le3{
+	height: 290px;
+	margin-top: 60px;
+}
+.le3 h1{
+	display: inline-block;
+	font-size: 25px;
+	line-height: 40px;
+    color: #555555;
+    margin: 0 480px 0 0;
+}
+.le3 h1 i{
+	display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: -10px;
+    background: url(../img/LOL.png);
+	background-position: -40px -40px;
+}
+.le3>a{
+	display: inline-block;
+    height: 30px;
+    padding: 0 10px;
+    line-height: 30px;
+    margin-left: 10px;
+    background: #efefef;
+    border: 2px solid #efefef;
+    color: #777777;
+    font-size: 14px;
+    border-radius: 25px;
+}
+.le3>span{
+	font-size: 30px;
+	line-height: 0;
+}
+.le31{
+    border-bottom: 4px solid #ebecec;
+}
+.le3 .le31 p{
+	display: inline-block;
+    height: 36px;
+    width: 125px;
+    line-height: 36px;
+    color: #666666;
+    font-size: 16px;
+    text-align: center;
+}
+.le3 .le31 a{
+	margin: 20px 0 0 30px;
+	float: right;
+    color: #666;
+    font-size: 14px;
+}
+.le3 ul{
+	height: 195px;
+	display: inline-block;
+	padding: 0;
+}
+.le3 li{
+	list-style: none;
+	width: 380px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+}
+.tabla{
+	position: absolute;
+	background: #fff;
+}
+.ri1{
+	position: absolute;
+	top: 719px;
+}
+.ri1>a{
+	display: inline-block;
+	border-bottom: 4px solid #ebecec;
+    height: 36px;
+    width: 90px;
+    line-height: 36px;
+    color: #666666;
+    font-size: 16px;
+    text-align: center;
+}
+.ri1>span{
+	width: 36px;
+    height: 36px;
+    font-size: 23px;
+}
+.tabla>p{
+	margin: 0;
+	height: 46px;
+	text-align: center;
+    line-height: 46px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #00a684;
+}
+.ri1 ul{
+	padding: 0;
+}
+.ri1 ul li{
+	list-style: none;
+	height: 26px;
+    line-height: 26px;
+    padding: 3px 0;
+}
+.ri1 ul li span{
+	display: inline-block;
+    width: 46px;
+    height: 22px;
+    line-height: 22px;
+    background: #ebebeb;
+    border: 2px solid #ebebeb;
+    text-align: center;
+    color: #a4a4a4;
+    border-radius: 15px;
+}
+.ri1 ul li i{
+	font-style: normal;
+	float: right;
+}
+.ri1 h1{
+    height: 40px;
+    line-height: 40px;
+    color: #797979;
+    background: #efefef;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 300px;
+}
+.ri2{
+	height: 320px;
+	margin-top: 60px;
+}
+.ri2 span{
+	display: inline-block;
+	font-size: 25px;
+	line-height: 40px;
+	height: 40px;
+    color: #555555;
+    vertical-align: middle;
+}
+.ri2 span i{
+	display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: -10px;
+    background: url(../img/LOL.png);
+	background-position: -40px -40px;
+}
+.ri2 a{
+	display: inline-block;
+    height: 30px;
+    padding: 0 10px;
+    line-height: 30px;
+    margin-left: 15px;
+    background: #efefef;
+    border: 2px solid #efefef;
+    color: #777777;
+    font-size: 14px;
+    border-radius: 25px;
+}
+.xiong p{
+	display: inline-block;
+    height: 36px;
+    width: 130px;
+    line-height: 36px;
+    color: #666666;
+    font-size: 16px;
+    text-align: center;
+    border-bottom: 4px solid #ebecec;
+}
+.ri2 img{
+	width: 76px;
+    height: 76px;
+}
+.ying{
+	position: absolute;
+}
+.ying em{
+	display: block;
+	text-align: right;
+    color: #9F9F9F;
+    margin-bottom: 22px;
+    font-style: normal;
+    font-size: 12px;
+}
+.ri3{
+	height: 274px;
+	margin-top: 70px;
+}
+.ri3 p{
+	font-size: 25px;
+	line-height: 40px;
+	height: 40px;
+    color: #555555;
+    vertical-align: middle;
+}
+.ri3 p i{
+	display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: -10px;
+    background: url(../img/LOL.png);
+	background-position: -40px -40px;
+}
+.ri3 a{
+	display: inline-block;
+    width: 88px;
+    padding-top: 3px;
+    height: 62px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    background: #fefefe;
+    font-size: 14px;
+    color: #555555;
+    text-align: center;
+}
+.ri3 a em{
+	display: block;
+    width: 40px;
+    height: 36px;
+    margin: 0 auto;
+	background: url(../img/LOL.png);
+	background-position: -725px -80px;
+}
+.ri4{
+	height: 232px;
+	margin-top: 100px;
+	position: relative;
+}
+.ri4 span{
+	display: inline-block;
+	font-size: 25px;
+	line-height: 40px;
+	height: 40px;
+    color: #555555;
+    vertical-align: middle;
+    margin-right: 130px;
+}
+.ri4 span i{
+	display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: -10px;
+    background: url(../img/LOL.png);
+	background-position: -40px -40px;
+}
+.ri4 a{
+	display: inline-block;
+    height: 30px;
+    padding: 0 10px;
+    line-height: 30px;
+    margin-left: 15px;
+    background: #efefef;
+    border: 2px solid #efefef;
+    color: #777777;
+    font-size: 14px;
+    border-radius: 25px;
+}
+.ri4>img{
+	display: inline-block;
+	width: 145px;
+	height: 173px;
+	margin-top: 20px;
+}
+.ri4 p{
+	position: absolute;
+    font-size: 14px;
+    color: #fff;
+    top: 156px;
+    height: 53px;
+    width: 145px;
+    padding-top: 10px;
+    text-align: center;
+    background: rgba(0,0,0,.5);
+}
+.ri4 ul{
+	display: inline-block;
+	padding: 0;
+}
+.ri4 ul li{
+	list-style: none;
+	font-size: 14px;
+	height: 27px;
+	width: 240px;
+}
+.ri4 ul li em{
+	float: right;
+	background-color: #00A887;
+    color: #fff;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+ 	width: 60px;
+ 	height: 24px;
+ 	line-height: 24px;
+ 	vertical-align: middle;
+ 	font-style: normal;
+}
+.ri4 .img{
+	margin-top: 100px;
+}
+.ri4 .img img{
+	width: 400px;
+}
+.foot{
+	height: 238px;
+	width: 1240px;
+	margin: 50px auto 0;
+}
+.foot i{
+	margin-right: 20px;
+    width: 67px;
+    height: 67px;
+	display: inline-block;
+	background: url(../img/lol_4.png);
+	background-position: -264px 0;
+}
+.foot>a{
+	display: inline-block;
+	height: 67px;
+	margin-right: 170px;
+}
+.foot a span{
+	font-weight: bold;
+    color: #404040;
+    font-size: 14px;
+    line-height: 25px;
+    line-height: 0;
+}
+.foot a p{
+	font-size: 12px;
+}
+.foot em{
+	vertical-align: 30px;
+	font-style: normal;
+	width: 240px;
+	display: inline-block;
+    height: 34px;
+    line-height: 34px;
+    color: #666;
+    text-indent: 15px;
+    font-size: 14px;
+    border: 1px solid #CBCBCB;
+}
+.foot em span{
+	display: inline-block;
+	margin: 15px 0 0 60px;
+    background: url(../img/LOL.png);
+	width: 7px;
+    height: 6px;
+    background-position: -1233px -428px;
+}
+.last{
+	height: 100px;
+}
+.last i{
+	display: inline-block;
+    margin-right: 225px;
+    width: 257px;
+    height: 50px;
+    background: url(../img/lol_4.png);
+    background-position: 0 0;
+}
+.last span{
+	margin-top: 10px;
+	display: inline-block;
+	font-size: 14px;
+}
+.last span a{
+	line-height: 0;
+}
+.last span p{
+	line-height: 0;
+}
+.fix{
+	position: fixed;
+	height: 130px;
+	width: 108px;
+	top: 410px;
+	right: 0;
+}
+.fix p{
+	height: 108px;
+	width: 108px;
+	background: url(../img/LOL_5.png);
+	margin: 0;
+}
+.fix a{
+	color: #A5A5A5;
+    font-size: 12px;
+    text-align: center;
+}
