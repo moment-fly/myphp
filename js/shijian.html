@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>时钟</title>
+        <style type="text/css">
+           ul,li{ list-style: none; }
+            #box{width: 200px;height: 200px;border: 1px solid #000; border-radius: 50%;margin: 60px auto;position: relative;}
+            #hou,#min,#sec{transform-origin: bottom; position: absolute;}
+            #list li{width: 1px;height: 4px;background: #000;position: absolute;top: 0;left: 99px;transform-origin: 1px 100px; }
+            #list li:nth-of-type(5n+1){ width: 2px;height: 6px;}
+            /*#list li:nth-of-type(1){ transform: rotate(0deg);}*/
+            #hou{ width: 6px;height: 54px; background: #000; top: 46px;left: 97px;}
+            #min{width: 4px;height: 64px;background: #000;top: 36px;left: 98px;}
+            #sec{width: 2px;height: 74px;background: red;top: 26px;left: 99px;}
+            #cit{ width: 10px;height: 10px;border: 1px solid #000; border-radius: 50%;background: blue;position: absolute;top: 94px;left: 94px;}
+        </style>
+        <script>
+            window.onload = function(){
+                var list = document.getElementById('list');
+                var hou = document.getElementById('hou');
+                var min = document.getElementById('min');
+                var sec = document.getElementById('sec');
+                var ulin = "";
+                for(var i = 0;i<60;i++){
+                    ulin += "<li style='transform: rotate("+6*i+"deg);'></li>";
+                }
+                list.innerHTML = ulin;
+                tim();
+                setInterval(tim,1000);
+                function tim(){
+                    var date = new Date();
+                    var s = date.getSeconds();
+                    var m = date.getMinutes()+s/60;
+                    var h = (date.getHours()%12)+m/60;
+                    sec.style.transform = "rotate("+(s*360/60)+"deg)";
+                    min.style.transform = "rotate("+(m*360/60)+"deg)";
+                    hou.style.transform = "rotate("+(h*360/12)+"deg)";
+                }
+            }
+        </script>
+	</head>
+	<body>
+		<div id="box">
+            <ul id="list"><!-- <li></li><li></li> --></ul>
+            <div id="hou" class="list"></div>
+            <div id="min" class="list"></div>
+            <div id="sec"></div>
+            <div id="cit"></div>
+		</div>
+	</body>
+</html>

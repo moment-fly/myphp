@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>轮播</title>
+	<script type="text/javascript" src="../jquery-3.2.0.min.js"></script>
+
+	<style type="text/css">
+		.layout{
+			width: 800px;
+			height: 500px;
+			margin: 0 auto;
+			position: relative;
+			overflow: hidden;
+		}
+		.layout .list{
+			position: absolute;
+			padding: 0;		
+			left: 0;
+			top: 0;
+		}
+		.layout .list li{
+			width: 800px;
+			height: 500px;
+			float: left;
+		}
+		.layout .list li img{
+			width: 100%;
+			height: 500px;
+			
+		}
+		.pre,.next{
+			position: absolute;
+			font-size: 60px;
+			width: 100px;
+			height: 100px;
+			background: #000;
+			color: #fff;
+			top: 200px;
+			line-height: 100px;
+			text-align: center;
+		}
+		.pre{
+			left: 0;
+		}
+		.next{
+			right: 0;
+		}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+
+			var num = 0;
+			$('.layout .list').append($('.layout .list').html());
+			//复制了一份图片，长度变了。
+    //复制一份图片，是为了解决第一张图片切换到最后一张或 最后一张切换到第一张时，图片区域会出现空白，用户体验不友好。
+    // 页面一加载，就把ul定位到追加图片的第一张（本身图片在前，追加图片在后。）
+    //当图片位置到第一份图片第二张时，马上把图片定位到第二份的第一张,图片位置到最后一张时（第二份最后一张）时，就把图片定位到第一份最后一张,
+    //这样图片后面或前面还有一张图片，切换时不会留下空白。（关键之处）
+    //加载后图片排列像这样：1  2  3  4  5  1  2  3  4  5 
+			var len = $('.list li').length;
+			var liw = $('.list li').width(); //获取图片的宽度
+			$('.layout .list').width(liw*len);			
+			$('.layout .list').css("left",-len*liw/2);
+			
+			time = setInterval(function(){lt = parseInt($('.layout .list').css('left'))-liw;
+				igs(lt);} ,500);
+			$('.layout').hover(function(){
+				clearInterval(time);
+			},
+			function(){
+				time = setInterval(function(){lt = parseInt($('.layout .list').css('left'))-liw;
+				igs(lt);} ,1500);
+			})
+			$('.next').click(function(){
+				
+				lt = parseInt($('.layout .list').css('left'))-liw;
+				igs(lt);
+			});
+			function igs(lt){
+				if ($("ul").is(':animated')) { return; } 
+			//当ul正在执行动画的过程中，阻止执行其它动作。关键之处，不然图片切换显示不完全，到最后图片空白不显示。
+				$('.layout .list').animate({"left":lt},500,function(){
+					if(lt == (1-len)*liw){
+						$('.layout .list').css("left",(1-len/2)*liw);
+			//图片位置到最后一张时（第二份最后一张）时，
+            //就把图片定位到第一份最后一张。从而显示的是第一份最后一张。
+					}
+			//当图片位置到第一份图片第二张时，马上把图片定位到第二份的第一张。
+            //注意这里的设置的css一定到写在animate动画完成时的执行  
+            //函数里。否则图片只是一瞬间回到第一张，但是没有向右的动画效果。 
+				});
+			}
+		
+			$('.pre').click(function(){
+				
+				
+				li = parseInt(
+					$('.layout .list').css('left'))+liw;
+					img(li);
+			});
+			function img(li){
+				if ($("ul").is(':animated')) {
+					return; 
+				}
+				$('.layout .list').animate({"left":li},500,function(){
+					if(li == 0){
+						$('.layout .list').css("left",(-len/2)*liw);
+					}
+				});
+			}
+		})
+
+	</script>
+
+</head>
+<body>
+		<div class="layout">
+			<ul class="list">
+				<li><img src="img/ai.jpg"></li>
+				<li><img src="img/ga.jpg"></li>
+				<li><img src="img/ke.jpg"></li>
+				<li><img src="img/yao.jpg"></li>
+				<li><img src="img/zhan.jpg"></li>
+			</ul>
+		<div class="pre"><</div>
+		<div class="next">></div>
+		
+	</div>
+</body>
+</html>
