@@ -1,0 +1,1284 @@
+[ 2017-07-30T15:41:51+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.075004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.013001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action F:\tp\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-30T15:41:51+08:00 ] 127.0.0.1 /Sun/User/verify
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action F:\tp\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-30T15:42:09+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `test_users` WHERE ( `username` = 'lily' )  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-30T15:42:12+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.017600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action F:\tp\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-30T15:42:15+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action F:\tp\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-30T15:42:16+08:00 ] 127.0.0.1 /Sun/User/verify
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action F:\tp\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-30T15:42:20+08:00 ] 127.0.0.1 /Sun/User/verify?random=0.44311195557834404
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action F:\tp\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-30T15:42:28+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.002001s ]
+SQL: SELECT * FROM `test_users` WHERE ( `username` = 'lily' )  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-30T15:42:31+08:00 ] 127.0.0.1 /Sun/User/verify
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action F:\tp\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-30T15:44:00+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action F:\tp\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-30T15:44:00+08:00 ] 127.0.0.1 /Sun/User/verify
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action F:\tp\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-30T15:44:20+08:00 ] 127.0.0.1 /Sun/User/register
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action F:\tp\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-30T15:44:50+08:00 ] 127.0.0.1 /Sun/User/get_register_user_status
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.000000s ]
+SQL: SELECT `status` FROM `test_users` WHERE ( `username` = 't' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2017-07-30T15:44:50+08:00 ] 127.0.0.1 /Sun/User/get_register_user_status
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.002000s ]
+SQL: SELECT `status` FROM `test_users` WHERE ( `username` = 'te' ) LIMIT 1   [ RunTime:0.001000s ]
+
+[ 2017-07-30T15:44:50+08:00 ] 127.0.0.1 /Sun/User/get_register_user_status
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.000000s ]
+SQL: SELECT `status` FROM `test_users` WHERE ( `username` = 'tes' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2017-07-30T15:44:51+08:00 ] 127.0.0.1 /Sun/User/get_register_user_status
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.002000s ]
+SQL: SELECT `status` FROM `test_users` WHERE ( `username` = 'test' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2017-07-30T15:44:58+08:00 ] 127.0.0.1 /Sun/User/get_register_user_status
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.001000s ]
+SQL: SELECT `status` FROM `test_users` WHERE ( `username` = 'test0' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2017-07-30T15:44:58+08:00 ] 127.0.0.1 /Sun/User/get_register_user_status
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.002000s ]
+SQL: SELECT `status` FROM `test_users` WHERE ( `username` = 'test00' ) LIMIT 1   [ RunTime:0.001000s ]
+
+[ 2017-07-30T15:44:58+08:00 ] 127.0.0.1 /Sun/User/get_register_user_status
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.001000s ]
+SQL: SELECT `status` FROM `test_users` WHERE ( `username` = 'test001' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2017-07-30T15:45:43+08:00 ] 127.0.0.1 /Sun/User/register
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.003001s ]
+SQL: SELECT * FROM `test_users` WHERE ( `username` = 'test001' )  [ RunTime:0.000000s ]
+SQL: INSERT INTO `test_users` (`username`,`password`) VALUES ('test001','9cf3f1ec64c14ee819fd8e385ec16b3853050cc7') [ RunTime:0.039002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action F:\tp\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-30T15:45:43+08:00 ] 127.0.0.1 /Sun/User/login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action F:\tp\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-30T15:45:43+08:00 ] 127.0.0.1 /Sun/User/verify
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action F:\tp\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-30T15:46:13+08:00 ] 127.0.0.1 /Sun/User/login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.002000s ]
+SQL: SELECT * FROM `test_users` WHERE ( `username` = 'test001' )  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+
+[ 2017-07-30T15:46:14+08:00 ] 127.0.0.1 /Sun/User/users
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `test_users`  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 34 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: secret F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 107 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: secret F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 107 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.046002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+
+[ 2017-07-30T15:47:04+08:00 ] 127.0.0.1 /Sun/Score/user_scores?id=2&username=jerry
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `test_scores` [ RunTime:0.015001s ]
+SQL: SELECT * FROM `test_scores` WHERE ( `user_id` = 2 )  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.041003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+
+[ 2017-07-30T15:47:08+08:00 ] 127.0.0.1 /Sun/Score/add_score?user_id=2&username=jerry
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `test_scores` [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.051003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+
+[ 2017-07-30T15:47:37+08:00 ] 127.0.0.1 /Sun/Score/user_scores?id=3&username=jack
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `test_scores` [ RunTime:0.002000s ]
+SQL: SELECT * FROM `test_scores` WHERE ( `user_id` = 3 )  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+
+[ 2017-07-30T15:47:47+08:00 ] 127.0.0.1 /Sun/User/users
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.002000s ]
+SQL: SELECT * FROM `test_users`  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 34 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: secret F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 107 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: secret F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 107 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+
+[ 2017-07-30T15:47:56+08:00 ] 127.0.0.1 /Sun/User/change_status
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.001000s ]
+SQL: UPDATE `test_users` SET `status`=2 WHERE ( `id` = 10 ) [ RunTime:0.040601s ]
+
+[ 2017-07-30T15:47:58+08:00 ] 127.0.0.1 /Sun/User/users
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `test_users`  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 34 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: secret F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 107 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: secret F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 107 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+
+[ 2017-07-30T15:48:01+08:00 ] 127.0.0.1 /Sun/User/edit_user?id=10
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `test_users` WHERE ( `id` = 10 )  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\Application\Runtime\Cache\Sun\8f0e053518a2346e6c9cf373657cc390.php 第 34 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\8f0e053518a2346e6c9cf373657cc390.php 第 78 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\8f0e053518a2346e6c9cf373657cc390.php 第 84 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\8f0e053518a2346e6c9cf373657cc390.php 第 90 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\8f0e053518a2346e6c9cf373657cc390.php 第 96 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\8f0e053518a2346e6c9cf373657cc390.php 第 102 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.074004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.074004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+
+[ 2017-07-30T15:48:06+08:00 ] 127.0.0.1 /Sun/User/edit_user_info
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.001000s ]
+SQL: UPDATE `test_users` SET `sex`='male',`username`='pony' WHERE ( `id` = 10 ) [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-30T15:48:35+08:00 ] 127.0.0.1 /Sun/User/users
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `test_users`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 34 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: secret F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 107 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: secret F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 107 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+
+[ 2017-07-30T15:52:02+08:00 ] 127.0.0.1 /Sun/Score/user_scores?id=2&username=jerry
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `test_scores` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `test_scores` WHERE ( `user_id` = 2 )  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+
+[ 2017-07-30T15:52:07+08:00 ] 127.0.0.1 /Sun/Score/add_score?user_id=2&username=jerry
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `test_scores` [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+
+[ 2017-07-30T15:52:15+08:00 ] 127.0.0.1 /Sun/Score/add_score?user_id=2&username=jerry
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `test_scores` [ RunTime:0.002000s ]
+SQL: INSERT INTO `test_scores` (`user_id`,`score`,`subject`,`year`,`month`) VALUES (2,'444444444444444444',0,2017,7) [ RunTime:0.026002s ]
+SQL: INSERT INTO `test_scores` (`user_id`,`score`,`subject`,`year`,`month`) VALUES (2,0,1,2017,7) [ RunTime:0.001000s ]
+SQL: INSERT INTO `test_scores` (`user_id`,`score`,`subject`,`year`,`month`) VALUES (2,0,2,2017,7) [ RunTime:0.002000s ]
+SQL: INSERT INTO `test_scores` (`user_id`,`score`,`subject`,`year`,`month`) VALUES (2,0,3,2017,7) [ RunTime:0.001000s ]
+SQL: INSERT INTO `test_scores` (`user_id`,`score`,`subject`,`year`,`month`) VALUES (2,0,4,2017,7) [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: query_result F:\tp\Application\Sun\Controller\ScoreController.class.php 第 39 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+
+[ 2017-07-30T15:52:15+08:00 ] 127.0.0.1 /Sun/Score/user_scores?id=2&username=jerry
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `test_scores` [ RunTime:0.002000s ]
+SQL: SELECT * FROM `test_scores` WHERE ( `user_id` = 2 )  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+
+[ 2017-07-30T15:52:31+08:00 ] 127.0.0.1 /Sun/Score/edit_score?id=56&username=jerry
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `test_scores` [ RunTime:0.002000s ]
+SQL: SELECT * FROM `test_scores` WHERE ( `id` = 56 )  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.043002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+
+[ 2017-07-30T15:52:36+08:00 ] 127.0.0.1 /Sun/Score/update_score
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.015600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015600s ]
+SQL: SHOW COLUMNS FROM `test_scores` [ RunTime:0.002000s ]
+SQL: UPDATE `test_scores` SET `score`='99' WHERE ( `id` = 56 ) [ RunTime:0.041002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+
+[ 2017-07-30T15:52:37+08:00 ] 127.0.0.1 /Sun/score/user_scores?id=2&username=jerry
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `test_scores` [ RunTime:0.002000s ]
+SQL: SELECT * FROM `test_scores` WHERE ( `user_id` = 2 )  [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+
+[ 2017-07-30T15:52:39+08:00 ] 127.0.0.1 /Sun/User/users
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.002001s ]
+SQL: SELECT * FROM `test_users`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 34 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: secret F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 107 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: secret F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 107 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+
+[ 2017-07-30T15:52:48+08:00 ] 127.0.0.1 /Sun/User/users
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.002000s ]
+SQL: SELECT * FROM `test_users` WHERE ( `id` = 0 )  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 34 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+
+[ 2017-07-30T15:52:54+08:00 ] 127.0.0.1 /Sun/User/users
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.002000s ]
+SQL: SELECT * FROM `test_users` WHERE ( `id` = 0 )  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 34 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+
+[ 2017-07-30T15:53:03+08:00 ] 127.0.0.1 /Sun/User/users
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `test_users`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 34 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: secret F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 107 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: secret F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 107 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+
+[ 2017-07-30T15:53:20+08:00 ] 127.0.0.1 /Sun/User/users
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `test_users` WHERE ( `username` LIKE '%s%' )  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 34 行.
+NOTIC: [8] Undefined index: secret F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 107 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: secret F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 107 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+
+[ 2017-07-30T17:10:24+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.067004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.013001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.014001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action F:\tp\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-30T17:10:25+08:00 ] 127.0.0.1 /Sun/User/verify
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action F:\tp\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-30T17:10:45+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.002000s ]
+SQL: SELECT * FROM `test_users` WHERE ( `username` = 'test001' )  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+
+[ 2017-07-30T17:10:45+08:00 ] 127.0.0.1 /Sun/User/users
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `test_users` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `test_users`  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 34 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: secret F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 107 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+NOTIC: [8] Undefined index: secret F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 107 行.
+NOTIC: [8] Undefined index: mobile F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 108 行.
+NOTIC: [8] Undefined index: telephone F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 109 行.
+NOTIC: [8] Undefined index: email F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 110 行.
+NOTIC: [8] Undefined index: address F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 111 行.
+NOTIC: [8] Undefined index: personcode F:\tp\Application\Runtime\Cache\Sun\d33f96384a99e6fa87a4877a4503fa70.php 第 113 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.048003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+

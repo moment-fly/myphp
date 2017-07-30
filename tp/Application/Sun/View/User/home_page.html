@@ -1,0 +1,31 @@
+
+<link href="/Application/Sun/assets/css/homepage.css" rel="stylesheet">
+
+
+<div class="homepage">
+	<table class="table">
+		<tr><h2>欢迎<?php echo $_SESSION['user_info'][0]['username'];?>登录！</h2></tr>
+		<tr>
+			<th>手机号码：</th>
+			<td><?php echo $_SESSION['user_info'][0]['mobile'];?></td>
+		</tr>
+		<tr>
+			<th>固定电话：</th>
+			<td><?php echo $_SESSION['user_info'][0]['telephone'];?></td>
+		</tr>
+		<tr>
+			<th>电子邮箱：</th>
+			<td><?php echo $_SESSION['user_info'][0]['email'];?></td>
+		</tr>
+		<tr>
+			<th>地址：</th>
+			<td><?php echo $_SESSION['user_info'][0]['address'];?></td>
+		</tr>
+		<tr>
+			<th>推广员码：</th>
+			<td><?php echo $_SESSION['user_info'][0]['personcode'];?></td>
+		</tr>
+		
+	</table>
+</div>
+

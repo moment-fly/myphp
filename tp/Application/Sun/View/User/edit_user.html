@@ -1,0 +1,53 @@
+
+<h2>个人信息修改</h2>
+<form method="post" action="/Sun/User/edit_user_info" class="form-horizontal">
+	<input type="hidden" name="id" value="<?php echo $_GET['id']?>" />
+	<div class="form-group">
+		<label  for="username" class="col-sm-3 control-label">用户名：</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="username" value="{$result_data[0]['username']}"/>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="username" class="col-sm-3 control-label">性别：</label>
+		<div class="col-sm-6">
+			<input type="radio" name="sex" <?php if ('male'==$result_data[0]['sex']):?> checked="checked" <?php endif; ?> value="male"/>男
+			<input type="radio" name="sex" <?php if ('female'==$result_data[0]['sex']):?> checked="checked" <?php endif; ?> value="female"/>女
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label for="username" class="col-sm-3 control-label">手机号：</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="mobile" value="{$result_data[0]['mobile']}"/>
+		</div>	
+	</div>
+	<div class="form-group">
+		<label for="username" class="col-sm-3 control-label">固定电话：</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="telephone" value="{$result_data[0]['telephone']}"/>
+		</div>	
+	</div>
+	<div class="form-group">
+		<label for="username" class="col-sm-3 control-label">邮箱：</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="email" value="{$result_data[0]['email']}"/>
+		</div>	
+	</div>
+	<div class="form-group">
+		<label for="username" class="col-sm-3 control-label">地址：</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="address" value="{$result_data[0]['address']}"/>
+		</div>	
+	</div>
+	<div class="form-group">
+		<label for="username" class="col-sm-3 control-label">推广员码：</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" name="personcode" value="{$result_data[0]['personcode']}"/>
+		</div>	
+	</div>
+	<div class="form-group">
+		<label for="username" class="col-sm-3 control-label"></label>
+		<button type="submit" value="提交" class="btn btn-lg btn-primary">提交</button>
+	</div>
+</form>

@@ -1,0 +1,240 @@
+[ 2017-07-29T21:08:59+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action E:\think\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-29T21:09:00+08:00 ] 127.0.0.1 /Sun/User/verify
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action E:\think\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-29T21:09:17+08:00 ] 127.0.0.1 /Sun/User/verify?random=0.5474461552788863
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action E:\think\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-29T21:09:17+08:00 ] 127.0.0.1 /Sun/User/verify?random=0.028083721509907233
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action E:\think\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-29T21:09:18+08:00 ] 127.0.0.1 /Sun/User/verify?random=0.061537185468798716
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action E:\think\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-29T21:09:18+08:00 ] 127.0.0.1 /Sun/User/verify?random=0.48115306033044525
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action E:\think\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-29T21:09:18+08:00 ] 127.0.0.1 /Sun/User/verify?random=0.8275855345093128
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action E:\think\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-29T21:09:18+08:00 ] 127.0.0.1 /Sun/User/verify?random=0.34302162882461285
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action E:\think\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-29T21:09:18+08:00 ] 127.0.0.1 /Sun/User/verify?random=0.5325422287295805
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action E:\think\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-29T21:09:18+08:00 ] 127.0.0.1 /Sun/User/verify?random=0.3046141722642337
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action E:\think\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-29T21:09:19+08:00 ] 127.0.0.1 /Sun/User/verify?random=0.9889761406400168
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action E:\think\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-29T21:09:19+08:00 ] 127.0.0.1 /Sun/User/verify?random=0.20544427726463987
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action E:\think\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-29T21:09:19+08:00 ] 127.0.0.1 /Sun/User/verify?random=0.7904129226345504
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action E:\think\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-29T21:09:19+08:00 ] 127.0.0.1 /Sun/User/verify?random=0.5492937242034903
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action E:\think\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-29T21:09:19+08:00 ] 127.0.0.1 /Sun/User/verify?random=0.270005524713832
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action E:\think\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-29T21:09:20+08:00 ] 127.0.0.1 /Sun/User/verify?random=0.6449477762354987
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action E:\think\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-29T21:09:20+08:00 ] 127.0.0.1 /Sun/User/verify?random=0.013167936225319421
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action E:\think\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-29T21:09:20+08:00 ] 127.0.0.1 /Sun/User/verify?random=0.9143852498875755
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action E:\think\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-29T21:09:20+08:00 ] 127.0.0.1 /Sun/User/verify?random=0.38287645518003055
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action E:\think\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-29T21:09:20+08:00 ] 127.0.0.1 /Sun/User/verify?random=0.7469200847088839
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action E:\think\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-29T21:09:21+08:00 ] 127.0.0.1 /Sun/User/verify?random=0.721701340152725
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller E:\think\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action E:\think\ThinkPHP\entrance.php 第 14 行.
+

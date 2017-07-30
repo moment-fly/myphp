@@ -1,0 +1,31 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color:#0000CC;
+  font-size:20px;
+  background-image:url(../img/register.jpg);
+  
+}
+.form-control{
+	box-shadow: 10px 10px 5px #888888;
+}
+form {
+  max-width: 700px;
+  height: 100%;
+   margin: 0 auto; 
+}
+h2 {
+  text-align: center;
+}
+.form-horizontal .form-group {
+   margin-left: 120px; 
+}
+.form-group{
+	height:50px;
+}
+.col-sm-3{
+	text-align:right;
+}
+.help-block{
+  display: inline-block;
+}

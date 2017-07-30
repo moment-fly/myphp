@@ -1,0 +1,16 @@
+body{
+	background-image:url(../img/background.jpg);
+}
+.homepage{
+	width:400px;
+	height:260px;
+	margin:0 auto;
+	background-color:#006633;
+	color:white;
+}
+h2{
+	text-align:center;
+}
+th{
+	text-align:right;
+}
