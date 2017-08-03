@@ -1,0 +1,31 @@
+[ 2017-07-31T15:44:36+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.060004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.009000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.009000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action F:\tp\ThinkPHP\entrance.php 第 14 行.
+
+[ 2017-07-31T15:44:36+08:00 ] 127.0.0.1 /Sun/User/verify
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 3 行.
+NOTIC: [8] Undefined variable: controller F:\tp\ThinkPHP\entrance.php 第 13 行.
+NOTIC: [8] Undefined variable: action F:\tp\ThinkPHP\entrance.php 第 14 行.
+
