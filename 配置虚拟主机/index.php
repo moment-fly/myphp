@@ -58,5 +58,3 @@
 	echo '<br/>';
 	echo $string[mt_rand(0, strlen($string) - 1)];
 	echo '<br/>';*/
-	
-	echo abs(9);
