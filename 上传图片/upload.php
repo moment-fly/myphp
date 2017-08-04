@@ -1,11 +1,11 @@
 <?php
-echo '<pre>';
+/* echo '<pre>';
 print_r($_POST);
 echo '</pre>';
 echo '<pre>';
 print_r($_FILES);
 echo '</pre>';
-
+ */
 $dir = 'upload/images/'.date('Y-m-d');
 if (!is_dir($dir)) {//文件夹是否存在
     mkdir($dir, '0777', true);//创建文件夹，赋予最高权限
